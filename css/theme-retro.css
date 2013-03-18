@@ -1,0 +1,19 @@
+.da-slider{
+	background: transparent url(../images/retro.gif) repeat 0% 0%;
+	border-top: 8px solid #a02522;
+	border-bottom: 8px solid #a02522;
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.2), 0px -2px 1px #fff;
+}
+
+.da-arrows span{
+	background: #861c19;
+}
+.da-dots span{
+	background: #861c19;
+}
+.da-slide p{
+	color: #ffd1c3;
+}
+a {
+ 	color: #D1AFAF;
+}

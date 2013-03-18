@@ -1,0 +1,477 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wp-parallax-content-slider\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-13 22:43+0100\n"
+"PO-Revision-Date: 2013-03-13 22:44+0100\n"
+"Last-Translator: Julien LE THUAUT <julien.le.thuaut@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SearchPath-0: C:\\Program Files (x86)\\EasyPHP-12.1\\www\\wordpress"
+"\\wp-content\\plugins\\wp-parallax-content-slider\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/static-slides-sample.php:16
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:304
+#: ../static-slides-sample.php:16 ../wp-parallax-content-slider.php:304
+msgid "Read more"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:315
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:316
+#: ../wp-parallax-content-slider.php:315 ../wp-parallax-content-slider.php:316
+msgid "WP Parallax Content Slider"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:330
+#: ../wp-parallax-content-slider.php:330
+msgid "No access"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:343
+#: ../wp-parallax-content-slider.php:343
+msgid "Incorrect slider mode"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:348
+#: ../wp-parallax-content-slider.php:348
+msgid "Incorrect slider theme"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:353
+#: ../wp-parallax-content-slider.php:353
+msgid "Incorrect background increment pixel size"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:358
+#: ../wp-parallax-content-slider.php:358
+msgid "Incorrect time interval"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:364
+#: ../wp-parallax-content-slider.php:364
+msgid "Incorrect first slide number"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:371
+#: ../wp-parallax-content-slider.php:371
+msgid "Incorrect maximum slide number"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:376
+#: ../wp-parallax-content-slider.php:376
+msgid "Incorrect maximum title length"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:381
+#: ../wp-parallax-content-slider.php:381
+msgid "Incorrect default image"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:416
+#: ../wp-parallax-content-slider.php:416
+msgid "Settings updated"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:420
+#: ../wp-parallax-content-slider.php:420
+msgid "Settings update failed:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:452
+#: ../wp-parallax-content-slider.php:452
+msgid "WP Parallax Content Slider Settings"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:456
+#: ../wp-parallax-content-slider.php:456
+msgid ""
+"This plugin is continuing to evolve because of contributions from Wordpress "
+"users like you. Thank you. If you found this plugin useful, especially if "
+"you use it for commercial purposes, feel free to make a"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:458
+#: ../wp-parallax-content-slider.php:458
+msgid "donation"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:460
+#: ../wp-parallax-content-slider.php:460
+msgid ""
+"Your support helps me to spend more time on development and provide better "
+"customer service."
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:464
+#: ../wp-parallax-content-slider.php:464
+msgid "Alternatively, if you like this plugin, don't hesitate to "
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:466
+#: ../wp-parallax-content-slider.php:466
+msgid "spread the word"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:468
+#: ../wp-parallax-content-slider.php:468
+msgid "about it on Twitter, on Facebook,on your own blog,"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:470
+#: ../wp-parallax-content-slider.php:470
+msgid "rate it"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:472
+#: ../wp-parallax-content-slider.php:472
+msgid "on Wordpress.org, thanks!"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:477
+#: ../wp-parallax-content-slider.php:477
+msgid "Code to insert"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:478
+#: ../wp-parallax-content-slider.php:478
+msgid ""
+"The code below must be inserted in a Wordpress file, where you want to "
+"display the parallax content slider:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:484
+#: ../wp-parallax-content-slider.php:484
+msgid ""
+"Since v0.9, an alternative is to call the plugin with a shortcode. Doing "
+"this, you will be able to include the slider inside a page or inside a blog "
+"post:"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:497
+#: ../wp-parallax-content-slider.php:497
+msgid "General Display Options"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:501
+#: ../wp-parallax-content-slider.php:501
+msgid "Slider display mode"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:504
+#: ../wp-parallax-content-slider.php:504
+msgid "Dynamic : display last posts"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:505
+#: ../wp-parallax-content-slider.php:505
+msgid "Static : display static HTML content"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:511
+#: ../wp-parallax-content-slider.php:511
+msgid "Number of pixels for background increment"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:514
+#: ../wp-parallax-content-slider.php:514
+msgid "A negative value will invert the parallax effect"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:519
+#: ../wp-parallax-content-slider.php:519
+msgid "Auto-play mode"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:522
+#: ../wp-parallax-content-slider.php:522
+msgid "Activate auto-play"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:527
+#: ../wp-parallax-content-slider.php:527
+msgid "Time between each slide (in ms)"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:534
+#: ../wp-parallax-content-slider.php:534
+msgid "Slider theme"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:537
+#: ../wp-parallax-content-slider.php:537
+msgid "Default : Yellow waves"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:538
+#: ../wp-parallax-content-slider.php:538
+msgid "Dark"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:539
+#: ../wp-parallax-content-slider.php:539
+msgid "Retro Red"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:540
+#: ../wp-parallax-content-slider.php:540
+msgid "Silver"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:550
+#: ../wp-parallax-content-slider.php:550
+msgid "Static Mode Display Options"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:554
+#: ../wp-parallax-content-slider.php:554
+msgid "Index of the first slide to display"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:565
+#: ../wp-parallax-content-slider.php:565
+msgid "Dynamic Mode Display Options"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:569
+#: ../wp-parallax-content-slider.php:569
+msgid "Content type"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:572
+#: ../wp-parallax-content-slider.php:572
+msgid "Posts"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:573
+#: ../wp-parallax-content-slider.php:573
+msgid "Pages"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:574
+#: ../wp-parallax-content-slider.php:574
+msgid "Post and pages"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:576
+#: ../wp-parallax-content-slider.php:576
+msgid "Choose what type of content you want to see in the slider"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:581
+#: ../wp-parallax-content-slider.php:581
+msgid "Number of articles to display"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:584
+#: ../wp-parallax-content-slider.php:584
+msgid "Maximum number of articles to display in the dynamic slider"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:589
+#: ../wp-parallax-content-slider.php:589
+msgid "Sort posts by"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:592
+#: ../wp-parallax-content-slider.php:592
+msgid "Date"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:593
+#: ../wp-parallax-content-slider.php:593
+msgid "Random"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:594
+#: ../wp-parallax-content-slider.php:594
+msgid "Title"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:595
+#: ../wp-parallax-content-slider.php:595
+msgid "Author"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:596
+#: ../wp-parallax-content-slider.php:596
+msgid "Number of comments"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:597
+#: ../wp-parallax-content-slider.php:597
+msgid "Last modified date"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:599
+#: ../wp-parallax-content-slider.php:599
+msgid "Choose how do you want to sort the posts in the slider"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:604
+#: ../wp-parallax-content-slider.php:604
+msgid "Sort order"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:607
+#: ../wp-parallax-content-slider.php:607
+msgid "Ascending"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:608
+#: ../wp-parallax-content-slider.php:608
+msgid "Descending"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:610
+#: ../wp-parallax-content-slider.php:610
+msgid "Choose how do you want to order the posts in the slider"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:615
+#: ../wp-parallax-content-slider.php:615
+msgid "Category filter"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:618
+#: ../wp-parallax-content-slider.php:618
+msgid "Only display posts of chosen categories"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:623
+#: ../wp-parallax-content-slider.php:623
+msgid "Categories to display"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:646
+#: ../wp-parallax-content-slider.php:646
+msgid ""
+"Categories to display (multiple selection). Empty selection will display all "
+"categories."
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:651
+#: ../wp-parallax-content-slider.php:651
+msgid "Slide title max length"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:654
+#: ../wp-parallax-content-slider.php:654
+msgid "Maximum number of characters to display in a dynamic slide title"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:659
+#: ../wp-parallax-content-slider.php:659
+msgid "Default image"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:662
+#: ../wp-parallax-content-slider.php:662
+msgid "Name of the default image to display for posts without thumbnail"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:666
+#: ../wp-parallax-content-slider.php:666
+msgid "Displayed text"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:669
+#: ../wp-parallax-content-slider.php:669
+msgid "Content"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:670
+#: ../wp-parallax-content-slider.php:670
+msgid "Excerpt"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:672
+#: ../wp-parallax-content-slider.php:672
+msgid ""
+"Choose if you want to display the full content or the excerpt in the slider"
+msgstr ""
+
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:679
+#: ../wp-parallax-content-slider.php:679
+msgid "Save Changes"
+msgstr ""

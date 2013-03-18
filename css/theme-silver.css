@@ -1,0 +1,22 @@
+.da-slider{
+	background: transparent url(../images/silver.gif) repeat 0% 0%;
+	border-top: 8px solid #e4e3e3;
+	border-bottom: 8px solid #e4e3e3;
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.2), 0px -2px 1px #fff;
+}
+
+.da-arrows span{
+	background: #acacac;
+}
+.da-dots span{
+	background: #acacac;
+}
+.da-slide p{
+	color: #818181;
+}
+a {
+	color: #484848;
+}
+.da-slide .da-link {
+	text-shadow: 1px 1px 1px #444;
+}

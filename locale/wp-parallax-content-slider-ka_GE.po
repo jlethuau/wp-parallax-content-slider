@@ -1,0 +1,538 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Parallax Content Slider v0.9.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-10 23:06+0100\n"
+"PO-Revision-Date: 2013-03-11 22:09+0100\n"
+"Last-Translator: Julien LE THUAUT <julien.le.thuaut@gmail.com>\n"
+"Language-Team: BizWebmaster <temur@danelia.info>\n"
+"Language: ka_GE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:234
+#: ../wp-parallax-content-slider.php:234
+msgid "Read more"
+msgstr "სრულად"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:245
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:246
+#: ../wp-parallax-content-slider.php:245 ../wp-parallax-content-slider.php:246
+msgid "WP Parallax Content Slider"
+msgstr "WP Parallax Content Slider"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:260
+#: ../wp-parallax-content-slider.php:260
+msgid "No access"
+msgstr "მიუწვდომელია"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:273
+#: ../wp-parallax-content-slider.php:273
+msgid "Incorrect slider mode"
+msgstr "სლაიდერის არასწორი რეჟიმი"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:278
+#: ../wp-parallax-content-slider.php:278
+msgid "Incorrect slider theme"
+msgstr "სლაიდერის არასწორი თემა"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:283
+#: ../wp-parallax-content-slider.php:283
+msgid "Incorrect background increment pixel size"
+msgstr "ფონის წანაცვლების არასწორი ზომა"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:288
+#: ../wp-parallax-content-slider.php:288
+msgid "Incorrect time interval"
+msgstr "არასწორი დროის ინტერვალი"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:294
+#: ../wp-parallax-content-slider.php:294
+msgid "Incorrect first slide number"
+msgstr "პირველი სლაიდის არასწორი ნომერი"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:301
+#: ../wp-parallax-content-slider.php:301
+msgid "Incorrect maximum slide number"
+msgstr "სლაიდების არასწორი მაქსიმალური რაოდენობა"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:306
+#: ../wp-parallax-content-slider.php:306
+msgid "Incorrect maximum title length"
+msgstr "სათაურის არასწორი მაქსიმალური სიგრძე"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:311
+#: ../wp-parallax-content-slider.php:311
+msgid "Incorrect default image"
+msgstr "არასწორი ნაგულისხმები გამოსახულება"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:342
+#: ../wp-parallax-content-slider.php:342
+msgid "Settings updated"
+msgstr "პარამეტრები განახლდა"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:346
+#: ../wp-parallax-content-slider.php:346
+msgid "Settings update failed:"
+msgstr "პარამეტრების განახლება ჩაიშალა:"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:394
+#: ../wp-parallax-content-slider.php:394
+msgid "WP Parallax Content Slider Settings"
+msgstr "WP Parallax Content Slider პარამეტრები"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:398
+#: ../wp-parallax-content-slider.php:398
+msgid ""
+"This plugin is continuing to evolve because of contributions from Wordpress "
+"users like you. Thank you. If you found this plugin useful, especially if "
+"you use it for commercial purposes, feel free to make a"
+msgstr ""
+"ეს ჩანართი ვითარდება სწორედ თქვენნაირი Wordpress-ის მომხმარებლების "
+"დახმარებით. თუ ამ ჩანართს სასარგებლოდ ჩთვლით, განსაკუთრებით იმ შემთხვევაში, "
+"თუკი მას კომერციული მიზნებისთვის იყენებთ, არ დაიშუროთ"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:400
+#: ../wp-parallax-content-slider.php:400
+msgid "donation"
+msgstr "შემოწირულობა"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:402
+#: ../wp-parallax-content-slider.php:402
+msgid ""
+"Your support helps me to spend more time on development and provide better "
+"customer service."
+msgstr ""
+"თქვენი მხარდაჭერა დამეხმარება მეტი დრო დავუთმო ჩანართის განვითარებას და "
+"შემოგთავაზოთ მომხმარებელთა უკეთესი მომსახურება."
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:406
+#: ../wp-parallax-content-slider.php:406
+msgid "Alternatively, if you like this plugin, don't hesitate to "
+msgstr "ამას გარდა, თუკი თქვენ მოგწონთ ეს ჩანართი, ნუ გადადებთ "
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:408
+#: ../wp-parallax-content-slider.php:408
+msgid "spread the word"
+msgstr "მისი გავრცელებისთვის ორიოდ სიტყვის შეწევნას"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:410
+#: ../wp-parallax-content-slider.php:410
+msgid "about it on Twitter, on Facebook,on your own blog,"
+msgstr "Twitter-ზე, Facebook-ზე, ან თქვენს საკუთარ ბლოგზე."
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:412
+#: ../wp-parallax-content-slider.php:412
+msgid "rate it"
+msgstr "შეაფასეთ იგი"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:414
+#: ../wp-parallax-content-slider.php:414
+msgid "on Wordpress.org, thanks!"
+msgstr "Wordpress.org-ზე. გმადლობთ!"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:419
+#: ../wp-parallax-content-slider.php:419
+msgid "Code to insert"
+msgstr "ჩასასმელი კოდი"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:420
+#: ../wp-parallax-content-slider.php:420
+msgid ""
+"The code below must be inserted in a Wordpress file, where you want to "
+"display the parallax content slider:"
+msgstr ""
+"ქვემოთ მითითებული კოდი უნდა ჩაისვას Wordpress-ის იმ ფაილში, რომელშიც გსურთ "
+"რომ გამოჩნდეს parallax content slider:"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:426
+#: ../wp-parallax-content-slider.php:426
+msgid ""
+"Since v0.9, an alternative is to call the plugin with a shortcode. Doing "
+"this, you will be able to include the slider inside a page or inside a blog "
+"post:"
+msgstr ""
+"0.9 ვერსიიდან მოყოლებული, ჩანართი შეგიძლიათ გამოიძახოთ შემკოდის გამოყენებით "
+"გვერდში, სტატიაში, ან გვერდითა პანელში ტექსტური ვიჯეტის გამოყენებით:"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:439
+#: ../wp-parallax-content-slider.php:439
+msgid "General Display Options"
+msgstr "ჩვენების პარამეტრები"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:443
+#: ../wp-parallax-content-slider.php:443
+msgid "Slider display mode"
+msgstr "სლაიდერის ჩვენების რეჟიმი"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:446
+#: ../wp-parallax-content-slider.php:446
+msgid "Dynamic : display last posts"
+msgstr "დინამიკური: ბოლო ჩანაწერების ჩვენება"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:447
+#: ../wp-parallax-content-slider.php:447
+msgid "Static : display static HTML content"
+msgstr "სტატიკური: სტატიკური HTML კონტენტის ჩვენება"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:453
+#: ../wp-parallax-content-slider.php:453
+msgid "Number of pixels for background increment"
+msgstr "ფონის წანაცვლების ზომა პიქსელებში"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:456
+#: ../wp-parallax-content-slider.php:456
+msgid "A negative value will invert the parallax effect"
+msgstr "უარყოფითი რიცხვი შეცვლის პარალაქს ეფექტის მიმართულებას."
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:461
+#: ../wp-parallax-content-slider.php:461
+msgid "Auto-play mode"
+msgstr "ავტომატური ჩართვის რეჟიმი"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:464
+#: ../wp-parallax-content-slider.php:464
+msgid "Activate auto-play"
+msgstr "ავტომატური ჩართვის აქტივაცია"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:469
+#: ../wp-parallax-content-slider.php:469
+msgid "Time between each slide (in ms)"
+msgstr "დაყოვნება სლაიდებს შორის (მწმ)"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:476
+#: ../wp-parallax-content-slider.php:476
+msgid "Slider theme"
+msgstr "სლაიდერის თემა"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:479
+#: ../wp-parallax-content-slider.php:479
+msgid "Default : Yellow waves"
+msgstr "ნაგულისხმები: ყვითელი ტალღები"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:480
+#: ../wp-parallax-content-slider.php:480
+msgid "Dark"
+msgstr "მუქი"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:481
+#: ../wp-parallax-content-slider.php:481
+msgid "Retro Red"
+msgstr "წითელი რეტრო"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:482
+#: ../wp-parallax-content-slider.php:482
+msgid "Silver"
+msgstr "ვერცხლისფერი"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:492
+#: ../wp-parallax-content-slider.php:492
+msgid "Static Mode Display Options"
+msgstr "სტატიკური რეჟიმის ჩვენების პარამეტრები"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:496
+#: ../wp-parallax-content-slider.php:496
+msgid "Index of the first slide to display"
+msgstr "პირველი საჩვენებელი სლაიდის მაჩვენებელი"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:507
+#: ../wp-parallax-content-slider.php:507
+msgid "Dynamic Mode Display Options"
+msgstr "დინამიკური რეჟიმის ჩვენების პარამეტრები"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:511
+#: ../wp-parallax-content-slider.php:511
+msgid "Content type"
+msgstr "წყაროს ტიპი"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:514
+#: ../wp-parallax-content-slider.php:514
+msgid "Posts"
+msgstr "ჩანაწერები"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:515
+#: ../wp-parallax-content-slider.php:515
+msgid "Pages"
+msgstr "გვერდები"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:516
+#: ../wp-parallax-content-slider.php:516
+msgid "Post and pages"
+msgstr "ჩანაწერები და გვერდები"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:518
+#: ../wp-parallax-content-slider.php:518
+msgid "Choose what type of content you want to see in the slider"
+msgstr "აირჩიეთ რომელი წყაროს გამოყენება გსურთ სლაიდერში"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:523
+#: ../wp-parallax-content-slider.php:523
+msgid "Number of articles to display"
+msgstr "სლაიდერში საჩვენებელი ჩანაწერების რაოდენობა"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:526
+#: ../wp-parallax-content-slider.php:526
+msgid "Maximum number of articles to display in the dynamic slider"
+msgstr "სლაიდერში საჩვენებელი ჩანაწერების მაქსიმალური რაოდენობა"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:531
+#: ../wp-parallax-content-slider.php:531
+msgid "Sort posts by"
+msgstr "ჩანაწერების თანამიმდევრობა"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:534
+#: ../wp-parallax-content-slider.php:534
+msgid "Date"
+msgstr "თარიღის მიხედვით"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:535
+#: ../wp-parallax-content-slider.php:535
+msgid "Random"
+msgstr "შემთხვევითი"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:536
+#: ../wp-parallax-content-slider.php:536
+msgid "Title"
+msgstr "სათაურის მიხედვით"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:537
+#: ../wp-parallax-content-slider.php:537
+msgid "Author"
+msgstr "ავტორის მიხედვით"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:538
+#: ../wp-parallax-content-slider.php:538
+msgid "Number of comments"
+msgstr "კომენტარების რაოდენობის მიხედვით"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:539
+#: ../wp-parallax-content-slider.php:539
+msgid "Last modified date"
+msgstr "ბოლო ცვლილების თარიღის მიხედვით"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:541
+#: ../wp-parallax-content-slider.php:541
+msgid "Choose how do you want to sort the posts in the slider"
+msgstr "აირჩიეთ ჩანაწერების თანამიმდევრობა სლაიდერში"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:546
+#: ../wp-parallax-content-slider.php:546
+msgid "Sort order"
+msgstr "დალაგების წესი"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:549
+#: ../wp-parallax-content-slider.php:549
+msgid "Ascending"
+msgstr "ზრდადი"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:550
+#: ../wp-parallax-content-slider.php:550
+msgid "Descending"
+msgstr "კლებადი"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:552
+#: ../wp-parallax-content-slider.php:552
+msgid "Choose how do you want to order the posts in the slider"
+msgstr "აირჩიეთ, თუ როგორ უნდა განლაგდნენ ჩანაწერები სლაიდერში"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:557
+#: ../wp-parallax-content-slider.php:557
+msgid "Category filter"
+msgstr "კატეგორიით გაცხრილვა"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:560
+#: ../wp-parallax-content-slider.php:560
+msgid "Only display posts of chosen categories"
+msgstr "აჩვენე ჩანაწერები მხოლოდ არჩეული კატეგორიიდან"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:565
+#: ../wp-parallax-content-slider.php:565
+msgid "Categories to display"
+msgstr "საჩვენებელი კატეგორიები"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:590
+#: ../wp-parallax-content-slider.php:590
+msgid ""
+"Categories to display (multiple selection). Empty selection will display all "
+"categories."
+msgstr ""
+"საჩვენებელი კატეგორიები (მრავლობითი არჩევა). ცარიელი ველის არჩევით აჩვენებთ "
+"ყველა კატეგორიის ჩანაწერებს."
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:595
+#: ../wp-parallax-content-slider.php:595
+msgid "Slide title max length"
+msgstr "სლაიდის სათაურის მაქსიმალური სიგრძე"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:598
+#: ../wp-parallax-content-slider.php:598
+msgid "Maximum number of characters to display in a dynamic slide title"
+msgstr ""
+"სიმბოლოების მაქსიმალური რაოდენობა, რომლებიც გამოჩნდება დინამიკური სლაიდის "
+"სათაურში"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:603
+#: ../wp-parallax-content-slider.php:603
+msgid "Default image"
+msgstr "ნაგულისხმები გამოსახულება"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:606
+#: ../wp-parallax-content-slider.php:606
+msgid "Name of the default image to display for posts without thumbnail"
+msgstr ""
+"იმ გამოსახულების სახელწოდება, რომელიც გამოჩნდება რჩეული გამოსახულების "
+"არმქონე სლაიდებში"
+
+# @ wp-parallax-content-slider
+#: C:\Program Files
+#: (x86)\EasyPHP-12.1\www\wordpress\wp-content\plugins\wp-parallax-content-slider/wp-parallax-content-slider.php:625
+#: ../wp-parallax-content-slider.php:625
+msgid "Save Changes"
+msgstr "ცვლილებების შენახვა"

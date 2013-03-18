@@ -1,0 +1,19 @@
+.da-slider{
+	background: transparent url(../images/dark.gif) repeat 0% 0%;
+	border-top: 8px solid #242424;
+	border-bottom: 8px solid #242424;
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.2), 0px -2px 1px #fff;
+}
+
+.da-arrows span{
+	background: #0e0e0e;
+}
+.da-dots span{
+	background: #0e0e0e;
+}
+.da-slide p{
+	color: #d1d1d1;
+}
+a {
+	color: #757575;
+}
