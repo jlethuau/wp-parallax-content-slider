@@ -35,6 +35,9 @@ class WpParallaxContentSlider
 		// Parallax slider plugin specific actions
 		add_action( 'admin_menu',  array( $this, 'admin_menu' ) );
 		add_shortcode( 'parallaxcontentslider', array( $this, 'parallaxcontentslider_shortcode_call' ) );
+		
+		// TODO: add a new custom post type "Parallax slides" to replace old HTML static slides
+		
 	} // end constructor
 	
 	/**
