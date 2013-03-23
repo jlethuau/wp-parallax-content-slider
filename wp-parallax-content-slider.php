@@ -10,6 +10,8 @@
 */
 class WpParallaxContentSlider
 {
+	public $pluginUrl = '';
+
 	/**
 	 * Constructor: Initializes the plugin
 	 */
@@ -17,26 +19,62 @@ class WpParallaxContentSlider
 		// i18n init
 		load_plugin_textdomain( 'wp-parallax-content-slider', false, basename( dirname( __FILE__ ) ) . '/locale' );
 
-		// Javascript init
-		wp_enqueue_script('jquery');
-		wp_enqueue_script( 'wp-parallax-content-slider-modernizr', plugins_url( 'js/modernizr.custom-2.6.2.js', __FILE__ ) );
-		wp_enqueue_script( 'wp-parallax-content-slider-jgestures', plugins_url( 'js/jgestures.min.js', __FILE__ ) );
-		wp_enqueue_script( 'wp-parallax-content-slider-jswipe', plugins_url( 'js/jquery.jswipe.js', __FILE__ ) );
-		wp_enqueue_script( 'wp-parallax-content-slider-cslider', plugins_url( 'js/jquery.cslider.js', __FILE__ ) );
-		
-		// CSS Init
-		wp_enqueue_style( 'wp-parallax-content-slider-css', plugins_url( 'css/style.css', __FILE__ ) );
-		
+		// Set abs path
+		$this->pluginUrl = plugins_url('', __FILE__);
+
+		if ( !is_admin() ) {
+			add_action( 'wp_enqueue_scripts', array( &$this, 'enqueue_scripts' ) );
+		}
+
 		// Register hooks that are fired when the plugin is activated, deactivated, and uninstalled, respectively.
 		register_activation_hook( __FILE__, array( $this, 'activate' ) );
 		//register_deactivation_hook( __FILE__, array( $this, 'uninstall' ) ); // TODO: Doing this on deactivation should require an extra parameter (user choice)
 		register_uninstall_hook( __FILE__, array( $this, 'uninstall' ) );
-		
+
 		// Parallax slider plugin specific actions
 		add_action( 'admin_menu',  array( $this, 'admin_menu' ) );
 		add_shortcode( 'parallaxcontentslider', array( $this, 'parallaxcontentslider_shortcode_call' ) );
 	} // end constructor
-	
+
+	/**
+	 * Fired on WordPress script enqueue action.
+	 */
+	public function enqueue_scripts()
+	{
+		// Javascript init
+		wp_register_script(
+			'wp-parallax-content-slider-modernizr',
+			$this->pluginUrl . '/js/modernizr.custom-2.6.2.js',
+			array(),
+			false,
+			true
+		);
+		wp_register_script(
+			'wp-parallax-content-slider-jgestures',
+			$this->pluginUrl . '/js/jgestures.min.js',
+			array( 'jquery' ),
+			false,
+			true
+		);
+		wp_register_script(
+			'wp-parallax-content-slider-jswipe',
+			$this->pluginUrl . '/js/jquery.touchSwipe.min.js',
+			array( 'jquery' ),
+			false,
+			true
+		);
+		wp_register_script(
+			'wp-parallax-content-slider-cslider',
+			$this->pluginUrl . '/js/jquery.cslider.js',
+			array( 'jquery' ),
+			false,
+			true
+		);
+
+		// CSS Init
+		wp_enqueue_style( 'wp-parallax-content-slider-css', $this->pluginUrl . '/css/style.css' );
+	}
+
 	/**
 	 * Fired when the plugin is activated.
 	 *
@@ -45,49 +83,49 @@ class WpParallaxContentSlider
 	public function activate( $network_wide ) {
 		/*
 		 * Creating one option entry in the database to store user settings
-		 * Parameters have default values 
+		 * Parameters have default values
 		 * All this parameters can be changed easyly in the plugin admin section
-		 */		
+		 */
 		$prlx_slider_settings = array(
-				'mode' => 'static',					// Slider display mode (static / dynamic)
-				'theme' => 'silver',				// default / silver / retro / dark
-				'bgincrement' => 50,				// increment the background position (i.e. parallax effect) when sliding (in px)
-				'autoplay' => 0,					// slideshow auto switch ON (1) / OFF (0)
-				'interval' => 4000,					// Time between transitions (ms)
-				'first_slide' => 1,					// index of first slide to display (in static mode)
-				'nb_articles' => 5,					// Max number of articles to query in the blog database
+				'mode'            => 'static',					// Slider display mode (static / dynamic)
+				'theme'           => 'silver',				// default / silver / retro / dark
+				'bgincrement'     => 50,				// increment the background position (i.e. parallax effect) when sliding (in px)
+				'autoplay'        => 0,					// slideshow auto switch ON (1) / OFF (0)
+				'interval'        => 4000,					// Time between transitions (ms)
+				'first_slide'     => 1,					// index of first slide to display (in static mode)
+				'nb_articles'     => 5,					// Max number of articles to query in the blog database
 				'title_max_chars' => 30,			// Max number of characters to display for a slide title
-				'sort_by' => 'date',				// Default field for post sorting
-				'order_by' => 'desc',				// Default type of ordering
-				'default_image' => 'default.png',	// Default image to display in dynamic mode for posts without thumbnails
+				'sort_by'         => 'date',				// Default field for post sorting
+				'order_by'        => 'desc',				// Default type of ordering
+				'default_image'   => 'default.png',	// Default image to display in dynamic mode for posts without thumbnails
 				'category_filter' => 0,				// Category filtering ON (1) / OFF (0)
-				'categories' => '',					// Default is all (empty)
-				'text_content' => 'excerpt',		// Full content (content) or excerpt (excerpt)
-				'content_type' => 'post'			// Slider content type (post / page / both)
+				'categories'      => '',					// Default is all (empty)
+				'text_content'    => 'excerpt',		// Full content (content) or excerpt (excerpt)
+				'content_type'    => 'post'			// Slider content type (post / page / both)
 		);
-		
+
 		/*
 		 * Useful for old versions users : if old settings exist in DB (< v0.9.3), update to new system
 		 */
 		if( get_option( 'prlx_slider_mode' ) ) {
 			// Keep old values
-			$prlx_slider_settings['mode'] 			= get_option( 'prlx_slider_mode' );
-			$prlx_slider_settings['theme'] 			= get_option( 'prlx_slider_theme' );
-			$prlx_slider_settings['bgincrement'] 	= get_option( 'prlx_slider_bgincrement' );
-			$prlx_slider_settings['autoplay'] 		= get_option( 'prlx_slider_autoplay' );
-			$prlx_slider_settings['interval'] 		= get_option( 'prlx_slider_interval' );
-			$prlx_slider_settings['first_slide'] 	= get_option( 'prlx_slider_first_slide' );
-			$prlx_slider_settings['nb_articles'] 	= get_option( 'prlx_slider_nb_articles' );
+			$prlx_slider_settings['mode'] 			 = get_option( 'prlx_slider_mode' );
+			$prlx_slider_settings['theme'] 			 = get_option( 'prlx_slider_theme' );
+			$prlx_slider_settings['bgincrement'] 	 = get_option( 'prlx_slider_bgincrement' );
+			$prlx_slider_settings['autoplay']        = get_option( 'prlx_slider_autoplay' );
+			$prlx_slider_settings['interval']        = get_option( 'prlx_slider_interval' );
+			$prlx_slider_settings['first_slide'] 	 = get_option( 'prlx_slider_first_slide' );
+			$prlx_slider_settings['nb_articles'] 	 = get_option( 'prlx_slider_nb_articles' );
 			$prlx_slider_settings['title_max_chars'] = get_option( 'prlx_title_max_chars' );
-			$prlx_slider_settings['sort_by'] 		= get_option( 'prlx_slider_sort_by' );
-			$prlx_slider_settings['order_by'] 		= get_option( 'prlx_slider_order_by' );
-			$prlx_slider_settings['default_image'] 	= get_option( 'prlx_default_image' );
+			$prlx_slider_settings['sort_by'] 		 = get_option( 'prlx_slider_sort_by' );
+			$prlx_slider_settings['order_by'] 		 = get_option( 'prlx_slider_order_by' );
+			$prlx_slider_settings['default_image'] 	 = get_option( 'prlx_default_image' );
 			$prlx_slider_settings['category_filter'] = get_option( 'prlx_slider_category_filter' );
-			$prlx_slider_settings['categories'] 	= get_option( 'prlx_slider_categories' );
-			$prlx_slider_settings['text_content'] 	= get_option( 'prlx_text_content' );
-			$prlx_slider_settings['content_type'] 	= get_option( 'prlx_slider_content_type' );
-				
-			// Deletes obsolete DB entries			
+			$prlx_slider_settings['categories'] 	 = get_option( 'prlx_slider_categories' );
+			$prlx_slider_settings['text_content'] 	 = get_option( 'prlx_text_content' );
+			$prlx_slider_settings['content_type'] 	 = get_option( 'prlx_slider_content_type' );
+
+			// Deletes obsolete DB entries
 			delete_option( 'prlx_slider_mode' );
 			delete_option( 'prlx_slider_theme' );
 			delete_option( 'prlx_slider_bgincrement' );
@@ -102,12 +140,12 @@ class WpParallaxContentSlider
 			delete_option( 'prlx_slider_category_filter' );
 			delete_option( 'prlx_slider_categories' );
 			delete_option( 'prlx_text_content' );
-			delete_option( 'prlx_slider_content_type' );		
+			delete_option( 'prlx_slider_content_type' );
 		}
-		
+
 		add_option( 'prlx_slider_settings', $prlx_slider_settings );
 	} // end activate
-	
+
 	/**
 	 * Fired when the plugin is uninstalled.
 	 *
@@ -117,10 +155,10 @@ class WpParallaxContentSlider
 		// if uninstall not called from WordPress exit
 		if ( !defined( 'WP_UNINSTALL_PLUGIN' ) )
 			exit ();
-		
+
 		// Clean options in the database
 		delete_option( 'prlx_slider_settings' );
-		
+
 	} // end uninstall
 
 	/**
@@ -130,14 +168,20 @@ class WpParallaxContentSlider
 		get_wp_parallax_content_slider();
 		// TODO: Add attributes to customize the slider?
 	}
-	
+
 	/**
 	 * Return the plugin HTML code for output
 	 */
 	public function get_parallax_content_slider()
 	{
+		// Enqueue scripts
+		wp_enqueue_script( 'wp-parallax-content-slider-modernizr' );
+		wp_enqueue_script( 'wp-parallax-content-slider-jgestures' );
+		wp_enqueue_script( 'wp-parallax-content-slider-jswipe' );
+		wp_enqueue_script( 'wp-parallax-content-slider-cslider' );
+
 		// Retrieving plugin parameters (user choices or default values)
-		$prlx_slider_settings = get_option( 'prlx_slider_settings'); 
+		$prlx_slider_settings = get_option( 'prlx_slider_settings');
 		$prlx_slider_mode 				= $prlx_slider_settings['mode'];
 		$prlx_slider_theme 				= $prlx_slider_settings['theme'];
 		$prlx_slider_bgincrement 		= $prlx_slider_settings['bgincrement'];
@@ -173,13 +217,13 @@ class WpParallaxContentSlider
 		$typ = '';
 		switch ($prlx_slider_content_type) {
 			case "both":
-				$typ = array('post', 'page');
+				$typ = array( 'post', 'page' );
 				break;
 			case "page":
-				$typ = array('page');
+				$typ = array( 'page' );
 				break;
 			default:
-				$typ = array('post');
+				$typ = array( 'post' );
 		}
 
 		$cat = '';
@@ -191,11 +235,12 @@ class WpParallaxContentSlider
 		$args = array( 'post_type' => $typ, // If you wan't to choose custom types, you can set your own array here (eg. $typ = array('jobs'); )
 					   'orderby' => $prlx_sort,
 					   'order' => $prlx_order,
-					   'numberposts' =>  $prlx_slider_nb_articles,
-					   'cat' => $cat, 
-					   'suppress_filters'=>0 ); // Added for WPML support
+					   'posts_per_page' =>  $prlx_slider_nb_articles,
+					   'cat' => $cat,
+					   'suppress_filters'=>0, // Added for WPML support
+		);
 
-		$myposts = get_posts( $args );
+		$myposts = new WP_Query( apply_filters( 'prlx_pre_get_posts', $args ) );
 
 		// --------------------------------------------------------
 		// HTML Output beginning
@@ -203,17 +248,18 @@ class WpParallaxContentSlider
 		// TODO: remove this code in production mode
 		//echo $debug  = "prlx_slider_content_type : " . $prlx_slider_content_type . "<br/>";
 
+		$plugin_abs_path = $this->pluginUrl;
+		$default_slide_image = $plugin_abs_path . '/images/' . $prlx_default_image;
+
 		$outputDynamic = "<div id='da-slider' class='da-slider'>\n";
 
-		foreach( $myposts as $post ) :	setup_postdata($post);
+		while ( $myposts->have_posts() ) : $myposts->the_post();
 
 			// $custom = get_post_custom($post->ID);
-			$plugin_abs_path = plugins_url( '', __FILE__ );
-			$default_slide_image = $plugin_abs_path."/images/".$prlx_default_image;
 
 			// Display the post thumbnail if there is one (Thank you John)
 			if ( has_post_thumbnail() ) {
-				$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
+				$thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
 				$url = $thumb['0'];
 				$default_slide_image = $url;
 			}
@@ -223,16 +269,16 @@ class WpParallaxContentSlider
 															get_the_excerpt(),
 															get_permalink(),
 															$default_slide_image,
-															$prlx_title_max_chars)."\n";
+															$prlx_title_max_chars )."\n";
 			} else {
 				$outputDynamic .= $this->get_article_slide( get_the_title(),
 															get_the_content(),
 															get_permalink(),
 															$default_slide_image,
-															$prlx_title_max_chars)."\n";
+															$prlx_title_max_chars )."\n";
 			}
 
-		endforeach; wp_reset_postdata();
+		endwhile; wp_reset_postdata();
 
 $outputDynamic .= <<<DYNAMICOUTPUT
 <nav class="da-arrows">
@@ -275,14 +321,15 @@ SCRIPTOUTPUT;
 		// You can modify the slides in the php file : static-slides-sample.php
 		// Note : you should copy the sample file and include the new file here
 		// Doing this will prevent you to lose your changes when you will update the plugin automatically
-		include('static-slides-sample.php');
-		if ($prlx_slider_mode === 'dynamic')
+		include( 'static-slides-sample.php' );
+		if ( $prlx_slider_mode === 'dynamic' )
 		{
-			print $outputDynamic.$outputScript;
+			echo $outputDynamic.$outputScript;
 		}
 		else
 		{
-			print $outputStatic.$outputScript;
+			$outputStatic = '';
+			echo $outputStatic.$outputScript;
 		}
 
 		// HTML Output end
@@ -292,10 +339,12 @@ SCRIPTOUTPUT;
 	/*
 	 * Generate HTML output for an article slide
 	 */
-	function get_article_slide($title, $excerpt, $link_article, $url_image, $title_length, $alt_image = 'Alternative text')
+	function get_article_slide( $title, $excerpt, $link_article, $url_image, $title_length, $alt_image = 'Alternative text' )
 	{
 		// Parameters
-		if (strlen($title) > $title_length) $title = mb_substr($title, 0, $title_length)."...";
+		if ( strlen( $title ) > $title_length ) $title = mb_substr( $title, 0, $title_length ) . "...";
+
+		$title = apply_filters( 'prlx_slide_title', $title, get_the_title() );
 
 		// Slide output
 		$outputSlide  = "<div class='da-slide'>"."\n";
@@ -304,6 +353,9 @@ SCRIPTOUTPUT;
 		$outputSlide .= "<a href='".$link_article."' class='da-link'>" . __( 'Read more', 'wp-parallax-content-slider' ) . "</a>"."\n";
 		$outputSlide .= "<div class='da-img'><img src='".$url_image."' alt='".$alt_image."' /></div>"."\n";
 		$outputSlide .= "</div>"."\n";
+
+		$outputSlide = apply_filters( 'prlx_slide_content', $outputSlide, $this );
+
 		return $outputSlide;
 	}
 
@@ -337,67 +389,67 @@ SCRIPTOUTPUT;
 			$debug = "";//POST : " . var_dump($_POST) . "<br/>";
 			$error = "<ul>";
 			// General parameters
-			if ( empty($_POST['prlx_slider_mode']) )
+			if ( empty( $_POST['prlx_slider_mode'] ) )
 			{
 				$validation = false;
-				$error .= "<li>".__( 'Incorrect slider mode', 'wp-parallax-content-slider' )."</li>";
+				$error .= "<li>" . __( 'Incorrect slider mode', 'wp-parallax-content-slider' )."</li>";
 			}
-			if ( empty($_POST['prlx_slider_theme']) )
+			if ( empty( $_POST['prlx_slider_theme'] ) )
 			{
 				$validation = false;
-				$error .= "<li>".__( 'Incorrect slider theme', 'wp-parallax-content-slider' )."</li>";
+				$error .= "<li>" . __( 'Incorrect slider theme', 'wp-parallax-content-slider' )."</li>";
 			}
-			if ( empty($_POST['prlx_slider_bgincrement']) )
+			if ( empty( $_POST['prlx_slider_bgincrement'] ) )
 			{
 				$validation = false;
-				$error .= "<li>".__( 'Incorrect background increment pixel size', 'wp-parallax-content-slider' )."</li>";
+				$error .= "<li>" . __( 'Incorrect background increment pixel size', 'wp-parallax-content-slider' )."</li>";
 			}
-			if ( empty($_POST['prlx_slider_interval']) )
+			if ( empty( $_POST['prlx_slider_interval'] ) )
 			{
 				$validation = false;
-				$error .= "<li>".__( 'Incorrect time interval', 'wp-parallax-content-slider' )."</li>";
+				$error .= "<li>" . __( 'Incorrect time interval', 'wp-parallax-content-slider' )."</li>";
 			}
 			// Static parameters
-			if ( empty($_POST['prlx_slider_first_slide']) )
+			if ( empty( $_POST['prlx_slider_first_slide'] ) )
 			{
 				$validation = false;
-				$error .= "<li>".__( 'Incorrect first slide number', 'wp-parallax-content-slider' )."</li>";
+				$error .= "<li>" . __( 'Incorrect first slide number', 'wp-parallax-content-slider' )."</li>";
 			}
 			$error .= "</ul>";
 			// Dynamic parameters
-			if ( empty($_POST['prlx_slider_nb_articles']) )
+			if ( empty( $_POST['prlx_slider_nb_articles'] ) )
 			{
 				$validation = false;
-				$error .= "<li>".__( 'Incorrect maximum slide number', 'wp-parallax-content-slider' )."</li>";
+				$error .= "<li>" . __( 'Incorrect maximum slide number', 'wp-parallax-content-slider' )."</li>";
 			}
-			if ( empty($_POST['prlx_title_max_chars']) )
+			if ( empty( $_POST['prlx_title_max_chars'] ) )
 			{
 				$validation = false;
-				$error .= "<li>".__( 'Incorrect maximum title length', 'wp-parallax-content-slider' )."</li>";
+				$error .= "<li>" . __( 'Incorrect maximum title length', 'wp-parallax-content-slider' )."</li>";
 			}
-			if ( empty($_POST['prlx_default_image']) )
+			if ( empty( $_POST['prlx_default_image'] ) )
 			{
 				$validation = false;
-				$error .= "<li>".__( 'Incorrect default image', 'wp-parallax-content-slider' )."</li>";
+				$error .= "<li>" . __( 'Incorrect default image', 'wp-parallax-content-slider' )."</li>";
 			}
 
 			if ( $validation )
 			{
 				// categories (multiple selection)
-				if ($_POST['prlx_slider_category_filter'] && !empty($_POST['prlx_slider_categories'])) {
+				if ( $_POST['prlx_slider_category_filter'] && !empty( $_POST['prlx_slider_categories'] ) ) {
 					$categories_selected_values = '';
-					foreach($_POST['prlx_slider_categories'] as $selected_categorie){
-						$categories_selected_values.=$selected_categorie.',';
+					foreach( $_POST['prlx_slider_categories'] as $selected_categorie ){
+						$categories_selected_values .= $selected_categorie.',';
 					}
 				}
-				
+
 				// Creating option database array
 				$prlx_slider_settings = array(
-						'mode' 					=> $_POST['prlx_slider_mode'],					
-						'theme' 				=> $_POST['prlx_slider_theme'],				
-						'bgincrement' 			=> $_POST['prlx_slider_bgincrement'],				
-						'autoplay' 				=> $_POST['prlx_slider_autoplay'],					
-						'interval' 				=> $_POST['prlx_slider_interval'],					
+						'mode' 					=> $_POST['prlx_slider_mode'],
+						'theme' 				=> $_POST['prlx_slider_theme'],
+						'bgincrement' 			=> $_POST['prlx_slider_bgincrement'],
+						'autoplay' 				=> $_POST['prlx_slider_autoplay'],
+						'interval' 				=> $_POST['prlx_slider_interval'],
 						'first_slide' 			=> $_POST['prlx_slider_first_slide'],
 						'nb_articles' 			=> $_POST['prlx_slider_nb_articles'],
 						'title_max_chars' 		=> $_POST['prlx_title_max_chars'],
@@ -407,23 +459,23 @@ SCRIPTOUTPUT;
 						'category_filter' 		=> $_POST['prlx_slider_category_filter'],
 						'categories'			=> $categories_selected_values,
 						'text_content' 			=> $_POST['prlx_text_content'],
-						'content_type' 			=> $_POST['prlx_slider_content_type']
+						'content_type' 			=> $_POST['prlx_slider_content_type'],
 				);
 
 				// Update options in database
-				update_option( 'prlx_slider_settings', $prlx_slider_settings);
-				
-				echo "<div class='updated fade'><p>" . __( 'Settings updated', 'wp-parallax-content-slider' ) ."</p></div>".$debug;
+				update_option( 'prlx_slider_settings', $prlx_slider_settings );
+
+				echo "<div class='updated fade'><p>" . __( 'Settings updated', 'wp-parallax-content-slider' ) ."</p></div>" . $debug;
 			}
 			else
 			{
-				echo "<div class='error fade'><p>" . __( 'Settings update failed:', 'wp-parallax-content-slider' ) . $error . "</p></div>".$debug;
+				echo "<div class='error fade'><p>" . __( 'Settings update failed:', 'wp-parallax-content-slider' ) . $error . "</p></div>" . $debug;
 			}
 		}
-		
+
 		// Retrieve settings from database
-		$prlx_slider_settings = get_option( 'prlx_slider_settings'); 
-		
+		$prlx_slider_settings = get_option( 'prlx_slider_settings' );
+
 		?>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
@@ -451,7 +503,7 @@ SCRIPTOUTPUT;
 	<div class="icon32" id="icon-options-general"><br /></div>
 	<h2><?php _e( 'WP Parallax Content Slider Settings', 'wp-parallax-content-slider' ); ?></h2>
 
-	<div style="margin-top:1em; border: 1px solid #FFCC99; width: 96,5%; padding: 5px 15px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;">
+	<div style="margin-top:1em; border: 1px solid #FFCC99; width: 96.5%; padding: 5px 15px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;">
 		<p><?php
 			_e( 'This plugin is continuing to evolve because of contributions from Wordpress users like you. Thank you. If you found this plugin useful, especially if you use it for commercial purposes, feel free to make a', 'wp-parallax-content-slider' );
 			echo "&nbsp;<a href=\"http://jltweb.info/realisations/wp-parallax-content-plugin/#contribute\" target=\"_blank\">";
@@ -690,7 +742,7 @@ $wp_parallax_content_slider = new WpParallaxContentSlider();
 function get_wp_parallax_content_slider()
 {
 	global $wp_parallax_content_slider;
-	echo $wp_parallax_content_slider->get_parallax_content_slider();
+	$wp_parallax_content_slider->get_parallax_content_slider();
 }
 
 ?>

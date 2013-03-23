@@ -67,6 +67,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 ### 1.0-dev
 
 * Development version for GitHub users "only", official releases vill be packaged and put into the Wordpress.org official SVN 
+* Added filter hooks: prlx_slide_title, prlx_slide_content, prlx_pre_get_posts
+* New swipe JS plugin [touchswipe.js](http://labs.skinkers.com/touchSwipe/)
+
+Contributors: [matthiasbreuer](https://github.com/matthiasbreuer)
 
 ### 0.9.3 
 
