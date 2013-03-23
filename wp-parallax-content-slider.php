@@ -178,7 +178,7 @@ class WpParallaxContentSlider
 	{
 		// Enqueue scripts
 		wp_enqueue_script( 'wp-parallax-content-slider-modernizr' );
-		wp_enqueue_script( 'wp-parallax-content-slider-jgestures' );
+		/*wp_enqueue_script( 'wp-parallax-content-slider-jgestures' );*/
 		wp_enqueue_script( 'wp-parallax-content-slider-jswipe' );
 		wp_enqueue_script( 'wp-parallax-content-slider-cslider' );
 
@@ -294,7 +294,7 @@ $outputScript = <<<SCRIPTOUTPUT
 <script type="text/javascript">
 	jQuery(function() {
 		jQuery('#da-slider').cslider({
-			bgincrement	: $prlx_slider_bgincrement,
+			bgincrement : $prlx_slider_bgincrement,
 			autoplay    : $prlx_slider_autoplay,
 			interval    : $prlx_slider_interval,
 			current     : $prlx_slider_first_slide-1
@@ -304,17 +304,6 @@ $outputScript = <<<SCRIPTOUTPUT
 			 swipeLeft:  function() { jQuery('#da-slider').find('span.da-arrows-next').click() },
 			 swipeRight: function() { jQuery('#da-slider').find('span.da-arrows-prev').click() },
 		})
-
-		/* FIXME
-		jQuery('#da-slider').bind('swipeleft',function(){
-			console.log('Swipe event detected > left');
-			jQuery('#da-slider').find('span.da-arrows-next').click();
-		});
-		jQuery('#da-slider').bind('swiperight',function(){
-			console.log('Swipe event detected > right');
-			jQuery('#da-slider').find('span.da-arrows-prev').click();
-		});
-		*/
 	});
 </script>
 SCRIPTOUTPUT;
@@ -323,14 +312,14 @@ SCRIPTOUTPUT;
 		// You can modify the slides in the php file : static-slides-sample.php
 		// Note : you should copy the sample file and include the new file here
 		// Doing this will prevent you to lose your changes when you will update the plugin automatically
-		include( 'static-slides-sample.php' );
 		if ( $prlx_slider_mode === 'dynamic' )
 		{
 			echo $outputDynamic.$outputScript;
 		}
 		else
 		{
-			// $outputStatic = '';
+			$outputStatic = '';
+			include( 'static-slides-sample.php' );
 			echo $outputStatic.$outputScript;
 		}
 
