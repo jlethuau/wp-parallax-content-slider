@@ -22,6 +22,8 @@ class WpParallaxContentSlider
 		// Set abs path
 		$this->pluginUrl = plugins_url('', __FILE__);
 
+		// Only load scripts when it's needed (front-end)
+		wp_enqueue_script('jquery');
 		if ( !is_admin() ) {
 			add_action( 'wp_enqueue_scripts', array( &$this, 'enqueue_scripts' ) );
 		}
@@ -49,15 +51,15 @@ class WpParallaxContentSlider
 			false,
 			true
 		);
-		wp_register_script(
+		/*wp_register_script(
 			'wp-parallax-content-slider-jgestures',
 			$this->pluginUrl . '/js/jgestures.min.js',
 			array( 'jquery' ),
 			false,
 			true
-		);
+		);*/
 		wp_register_script(
-			'wp-parallax-content-slider-jswipe',
+			'wp-parallax-content-slider-touchSwipe',
 			$this->pluginUrl . '/js/jquery.touchSwipe.min.js',
 			array( 'jquery' ),
 			false,
@@ -87,19 +89,19 @@ class WpParallaxContentSlider
 		 * All this parameters can be changed easyly in the plugin admin section
 		 */
 		$prlx_slider_settings = array(
-				'mode'            => 'static',					// Slider display mode (static / dynamic)
-				'theme'           => 'silver',				// default / silver / retro / dark
-				'bgincrement'     => 50,				// increment the background position (i.e. parallax effect) when sliding (in px)
-				'autoplay'        => 0,					// slideshow auto switch ON (1) / OFF (0)
-				'interval'        => 4000,					// Time between transitions (ms)
-				'first_slide'     => 1,					// index of first slide to display (in static mode)
-				'nb_articles'     => 5,					// Max number of articles to query in the blog database
+				'mode'            => 'static',		// Slider display mode (static / dynamic)
+				'theme'           => 'silver',		// default / silver / retro / dark
+				'bgincrement'     => 50,			// increment the background position (i.e. parallax effect) when sliding (in px)
+				'autoplay'        => 0,				// slideshow auto switch ON (1) / OFF (0)
+				'interval'        => 4000,			// Time between transitions (ms)
+				'first_slide'     => 1,				// index of first slide to display (in static mode)
+				'nb_articles'     => 5,				// Max number of articles to query in the blog database
 				'title_max_chars' => 30,			// Max number of characters to display for a slide title
-				'sort_by'         => 'date',				// Default field for post sorting
-				'order_by'        => 'desc',				// Default type of ordering
+				'sort_by'         => 'date',		// Default field for post sorting
+				'order_by'        => 'desc',		// Default type of ordering
 				'default_image'   => 'default.png',	// Default image to display in dynamic mode for posts without thumbnails
 				'category_filter' => 0,				// Category filtering ON (1) / OFF (0)
-				'categories'      => '',					// Default is all (empty)
+				'categories'      => '',			// Default is all (empty)
 				'text_content'    => 'excerpt',		// Full content (content) or excerpt (excerpt)
 				'content_type'    => 'post'			// Slider content type (post / page / both)
 		);
@@ -328,7 +330,7 @@ SCRIPTOUTPUT;
 		}
 		else
 		{
-			$outputStatic = '';
+			// $outputStatic = '';
 			echo $outputStatic.$outputScript;
 		}
 
