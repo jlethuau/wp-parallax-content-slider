@@ -5,7 +5,7 @@ Contributors: wp-maverick, mbamultimedia
 Tags: slider, parallax, animation, jquery, responsive
 Requires at least: 3.0
 Tested up to: 3.5.1
-Stable tag: 0.9.2
+Stable tag: 0.9.3
 
 A customizable JQuery content slider with CSS3 animations and parallax effects.
 
@@ -69,7 +69,7 @@ In dynamic display mode, the plugin generate slides based on your wordpress post
 
 = How do I add/edit slides in static mode? =
 
-In static display mode, the plugin simply use the 4 slides which are in the file `static-slides-sample.php`. So if you want to add/edit slides, you’ll have to edit manually this file! (I recommand to copy the sample file and rename it, then change the inclusion in `wp-parallax-content-slider.php`:
+In static display mode, the plugin simply use the 4 slides which are in the file `static-slides-sample.php`. So if you want to add/edit slides, youâ€™ll have to edit manually this file! (I recommand to copy the sample file and rename it, then change the inclusion in `wp-parallax-content-slider.php`:
 `include('static-slides-sample.php');`
 to
 `include('static-slides-customized.php');`
