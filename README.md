@@ -24,13 +24,26 @@ Some of the parameters you can manage in the admin section are listed below:
 
 ## Usage
 
-Simply follow the instructions [here](http://wordpress.org/extend/plugins/wp-parallax-content-slider/installation/)
+### First installation
+
+Download ZIP file and simply follow the instructions [here](http://wordpress.org/extend/plugins/wp-parallax-content-slider/installation/)
+
+### Automatic update
+
+Only official releases will be deployed on the Wordpress.org SVN repository and then automatically updatable.
+
+Be careful, if you decide to upgrade automatically the plugin, be sure to backup your customized files, especially 'style.css' and 'static-slides-sample.php'. Automatic update will replace these files and you might lose your stuff!
 
 ## Roadmap
+
+If you want to help me or contribute to this project, I'll consider all requests, suggestions and pull requests from users and developpers.
+
+### TODOs
 
 * Code improvement
 * Add new translations files ([Contact me on twitter](http://twitter.com/JulienLeThuaut/) if you want to help :)
 * Use a new custom post type "Parallax slide" to manage static slides instead of the old static HTML file 
+* Better gesture 
 
 ## License
 
@@ -51,9 +64,21 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 ## Changelog
 
+### 1.0-dev
+
+* Development version for GitHub users "only", official releases vill be packaged and put into the Wordpress.org official SVN 
+
 ### 0.9.3 
 
+Please don't forgive to backup your customized files and styles before doing an automatic update!
+
 * Published to GitHub
+* New translations (Georgian and Russian) thanks to Temur Danelia
+* New parameter: Choose to display content or excerpt (Warning: displaying full content will certainly cause CSS bugs you'll have to fix yourself)
+* Database optimization: Settings are added in the DB into an array instead of many fields (Old settings will be retrieved before deletion)
+* WPML support: Fixed post queries to improve WPML support
+
+Notice: This would be the last release before a great code refactoring! V1.0 should really rocks ;)
 
 ### < 0.9.3 
 
