@@ -23,7 +23,6 @@ class WpParallaxContentSlider
 		$this->pluginUrl = plugins_url('', __FILE__);
 
 		// Only load scripts when it's needed (front-end)
-		wp_enqueue_script('jquery');
 		if ( !is_admin() ) {
 			add_action( 'wp_enqueue_scripts', array( &$this, 'enqueue_scripts' ) );
 		}
@@ -51,13 +50,6 @@ class WpParallaxContentSlider
 			false,
 			true
 		);
-		/*wp_register_script(
-			'wp-parallax-content-slider-jgestures',
-			$this->pluginUrl . '/js/jgestures.min.js',
-			array( 'jquery' ),
-			false,
-			true
-		);*/
 		wp_register_script(
 			'wp-parallax-content-slider-touchSwipe',
 			$this->pluginUrl . '/js/jquery.touchSwipe.min.js',
@@ -68,6 +60,13 @@ class WpParallaxContentSlider
 		wp_register_script(
 			'wp-parallax-content-slider-cslider',
 			$this->pluginUrl . '/js/jquery.cslider.js',
+			array( 'jquery' ),
+			false,
+			true
+		);
+		wp_register_script(
+			'wp-parallax-content-slider-core',
+			$this->pluginUrl . '/js/core.js',
 			array( 'jquery' ),
 			false,
 			true
@@ -178,7 +177,6 @@ class WpParallaxContentSlider
 	{
 		// Enqueue scripts
 		wp_enqueue_script( 'wp-parallax-content-slider-modernizr' );
-		/*wp_enqueue_script( 'wp-parallax-content-slider-jgestures' );*/
 		wp_enqueue_script( 'wp-parallax-content-slider-jswipe' );
 		wp_enqueue_script( 'wp-parallax-content-slider-cslider' );
 
@@ -201,6 +199,20 @@ class WpParallaxContentSlider
 		$prlx_slider_category_filter 	= $prlx_slider_settings['category_filter'];
 		$prlx_slider_categories			= $prlx_slider_settings['categories'];
 		$prlx_text_content				= $prlx_slider_settings['text_content'];
+
+		// Get some javascript values from database
+		wp_localize_script(
+			'wp-parallax-content-slider-core', // Script handle,
+			'prlx', // Name of global js object
+			array(
+				'bgincrement'	=> $prlx_slider_bgincrement,
+				'autoplay'		=> $prlx_slider_autoplay,
+				'interval'		=> $prlx_slider_interval,
+				'current'		=> $prlx_slider_first_slide - 1
+			) // Values of global js object
+		);
+		// Then enqueue modified script
+		wp_enqueue_script( 'wp-parallax-content-slider-core' );
 
 		switch( $prlx_slider_theme )
 		{
@@ -290,37 +302,19 @@ $outputDynamic .= <<<DYNAMICOUTPUT
 </div>
 DYNAMICOUTPUT;
 
-$outputScript = <<<SCRIPTOUTPUT
-<script type="text/javascript">
-	jQuery(function() {
-		jQuery('#da-slider').cslider({
-			bgincrement : $prlx_slider_bgincrement,
-			autoplay    : $prlx_slider_autoplay,
-			interval    : $prlx_slider_interval,
-			current     : $prlx_slider_first_slide-1
-		});
-
-		jQuery('#da-slider').swipe({
-			 swipeLeft:  function() { jQuery('#da-slider').find('span.da-arrows-next').click() },
-			 swipeRight: function() { jQuery('#da-slider').find('span.da-arrows-prev').click() },
-		})
-	});
-</script>
-SCRIPTOUTPUT;
-
 		// New in v0.3
 		// You can modify the slides in the php file : static-slides-sample.php
 		// Note : you should copy the sample file and include the new file here
 		// Doing this will prevent you to lose your changes when you will update the plugin automatically
 		if ( $prlx_slider_mode === 'dynamic' )
 		{
-			echo $outputDynamic.$outputScript;
+			echo $outputDynamic;
 		}
 		else
 		{
 			$outputStatic = '';
 			include( 'static-slides-sample.php' );
-			echo $outputStatic.$outputScript;
+			echo $outputStatic;
 		}
 
 		// HTML Output end
