@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wp-parallax-content-slider\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-19 18:40+0100\n"
-"PO-Revision-Date: 2013-03-19 18:40+0100\n"
-"Last-Translator: MBA Multimedia <mbamultimedia@gmail.com>\n"
+"POT-Creation-Date: 2013-03-23 21:09+0100\n"
+"PO-Revision-Date: 2013-03-23 21:10+0100\n"
+"Last-Translator: Julien LE THUAUT <julien.le.thuaut@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,311 +15,379 @@ msgstr ""
 "X-Generator: Poedit 1.5.5\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: static-slides-sample.php:16 wp-parallax-content-slider.php:307
+#: static-slides-sample.php:16 wp-parallax-content-slider.php:376
 msgid "Read more"
 msgstr ""
 
-#: wp-parallax-content-slider.php:318 wp-parallax-content-slider.php:319
+#: wp-parallax-content-slider.php:144
+msgid "Add new slide"
+msgstr ""
+
+#: wp-parallax-content-slider.php:145
+msgid "Edit slide"
+msgstr ""
+
+#: wp-parallax-content-slider.php:146
+msgid "New slide"
+msgstr ""
+
+#: wp-parallax-content-slider.php:147
+msgid "All slides"
+msgstr ""
+
+#: wp-parallax-content-slider.php:148
+msgid "See slide"
+msgstr ""
+
+#: wp-parallax-content-slider.php:149
+msgid "Find slide"
+msgstr ""
+
+#: wp-parallax-content-slider.php:150
+msgid "No slide found"
+msgstr ""
+
+#: wp-parallax-content-slider.php:151
+msgid "No slide in the trash"
+msgstr ""
+
+#: wp-parallax-content-slider.php:176
+msgid "Find category"
+msgstr ""
+
+#: wp-parallax-content-slider.php:177
+msgid "All categories"
+msgstr ""
+
+#: wp-parallax-content-slider.php:178
+msgid "Parent"
+msgstr ""
+
+#: wp-parallax-content-slider.php:179
+msgid "Parent:"
+msgstr ""
+
+#: wp-parallax-content-slider.php:180
+msgid "Edit category"
+msgstr ""
+
+#: wp-parallax-content-slider.php:181
+msgid "Update Slide Category"
+msgstr ""
+
+#: wp-parallax-content-slider.php:182
+msgid "Add a new category"
+msgstr ""
+
+#: wp-parallax-content-slider.php:183
+msgid "New category"
+msgstr ""
+
+#: wp-parallax-content-slider.php:184
+msgid "Slide categories"
+msgstr ""
+
+#: wp-parallax-content-slider.php:387 wp-parallax-content-slider.php:388
 msgid "WP Parallax Content Slider"
 msgstr ""
 
-#: wp-parallax-content-slider.php:333
+#: wp-parallax-content-slider.php:402
 msgid "No access"
 msgstr ""
 
-#: wp-parallax-content-slider.php:346
+#: wp-parallax-content-slider.php:415
 msgid "Incorrect slider mode"
 msgstr ""
 
-#: wp-parallax-content-slider.php:351
+#: wp-parallax-content-slider.php:420
 msgid "Incorrect slider theme"
 msgstr ""
 
-#: wp-parallax-content-slider.php:356
+#: wp-parallax-content-slider.php:425
 msgid "Incorrect background increment pixel size"
 msgstr ""
 
-#: wp-parallax-content-slider.php:361
+#: wp-parallax-content-slider.php:430
 msgid "Incorrect time interval"
 msgstr ""
 
-#: wp-parallax-content-slider.php:367
+#: wp-parallax-content-slider.php:436
 msgid "Incorrect first slide number"
 msgstr ""
 
-#: wp-parallax-content-slider.php:374
+#: wp-parallax-content-slider.php:443
 msgid "Incorrect maximum slide number"
 msgstr ""
 
-#: wp-parallax-content-slider.php:379
+#: wp-parallax-content-slider.php:448
 msgid "Incorrect maximum title length"
 msgstr ""
 
-#: wp-parallax-content-slider.php:384
+#: wp-parallax-content-slider.php:453
 msgid "Incorrect default image"
 msgstr ""
 
-#: wp-parallax-content-slider.php:419
+#: wp-parallax-content-slider.php:488
 msgid "Settings updated"
 msgstr ""
 
-#: wp-parallax-content-slider.php:423
+#: wp-parallax-content-slider.php:492
 msgid "Settings update failed:"
 msgstr ""
 
-#: wp-parallax-content-slider.php:455
+#: wp-parallax-content-slider.php:524
 msgid "WP Parallax Content Slider Settings"
 msgstr ""
 
-#: wp-parallax-content-slider.php:459
+#: wp-parallax-content-slider.php:528
 msgid ""
 "This plugin is continuing to evolve because of contributions from Wordpress "
 "users like you. Thank you. If you found this plugin useful, especially if "
 "you use it for commercial purposes, feel free to make a"
 msgstr ""
 
-#: wp-parallax-content-slider.php:461
+#: wp-parallax-content-slider.php:530
 msgid "donation"
 msgstr ""
 
-#: wp-parallax-content-slider.php:463
+#: wp-parallax-content-slider.php:532
 msgid ""
 "Your support helps me to spend more time on development and provide better "
 "customer service."
 msgstr ""
 
-#: wp-parallax-content-slider.php:467
+#: wp-parallax-content-slider.php:536
 msgid "Alternatively, if you like this plugin, don't hesitate to "
 msgstr ""
 
-#: wp-parallax-content-slider.php:469
+#: wp-parallax-content-slider.php:538
 msgid "spread the word"
 msgstr ""
 
-#: wp-parallax-content-slider.php:471
+#: wp-parallax-content-slider.php:540
 msgid "about it on Twitter, on Facebook,on your own blog,"
 msgstr ""
 
-#: wp-parallax-content-slider.php:473
+#: wp-parallax-content-slider.php:542
 msgid "rate it"
 msgstr ""
 
-#: wp-parallax-content-slider.php:475
+#: wp-parallax-content-slider.php:544
 msgid "on Wordpress.org, thanks!"
 msgstr ""
 
-#: wp-parallax-content-slider.php:480
+#: wp-parallax-content-slider.php:549
 msgid "Code to insert"
 msgstr ""
 
-#: wp-parallax-content-slider.php:481
+#: wp-parallax-content-slider.php:550
 msgid ""
 "The code below must be inserted in a Wordpress file, where you want to "
 "display the parallax content slider:"
 msgstr ""
 
-#: wp-parallax-content-slider.php:487
+#: wp-parallax-content-slider.php:556
 msgid ""
 "Since v0.9, an alternative is to call the plugin with a shortcode. Doing "
 "this, you will be able to include the slider inside a page or inside a blog "
 "post:"
 msgstr ""
 
-#: wp-parallax-content-slider.php:500
+#: wp-parallax-content-slider.php:569
 msgid "General Display Options"
 msgstr ""
 
-#: wp-parallax-content-slider.php:504
+#: wp-parallax-content-slider.php:573
 msgid "Slider display mode"
 msgstr ""
 
-#: wp-parallax-content-slider.php:507
+#: wp-parallax-content-slider.php:576
 msgid "Dynamic : display last posts"
 msgstr ""
 
-#: wp-parallax-content-slider.php:508
+#: wp-parallax-content-slider.php:577
 msgid "Static : display static HTML content"
 msgstr ""
 
-#: wp-parallax-content-slider.php:514
+#: wp-parallax-content-slider.php:583
 msgid "Number of pixels for background increment"
 msgstr ""
 
-#: wp-parallax-content-slider.php:517
+#: wp-parallax-content-slider.php:586
 msgid "A negative value will invert the parallax effect"
 msgstr ""
 
-#: wp-parallax-content-slider.php:522
+#: wp-parallax-content-slider.php:591
 msgid "Auto-play mode"
 msgstr ""
 
-#: wp-parallax-content-slider.php:525
+#: wp-parallax-content-slider.php:594
 msgid "Activate auto-play"
 msgstr ""
 
-#: wp-parallax-content-slider.php:530
+#: wp-parallax-content-slider.php:599
 msgid "Time between each slide (in ms)"
 msgstr ""
 
-#: wp-parallax-content-slider.php:537
+#: wp-parallax-content-slider.php:606
 msgid "Slider theme"
 msgstr ""
 
-#: wp-parallax-content-slider.php:540
+#: wp-parallax-content-slider.php:609
 msgid "Default : Yellow waves"
 msgstr ""
 
-#: wp-parallax-content-slider.php:541
+#: wp-parallax-content-slider.php:610
 msgid "Dark"
 msgstr ""
 
-#: wp-parallax-content-slider.php:542
+#: wp-parallax-content-slider.php:611
 msgid "Retro Red"
 msgstr ""
 
-#: wp-parallax-content-slider.php:543
+#: wp-parallax-content-slider.php:612
 msgid "Silver"
 msgstr ""
 
-#: wp-parallax-content-slider.php:553
+#: wp-parallax-content-slider.php:622
 msgid "Static Mode Display Options"
 msgstr ""
 
-#: wp-parallax-content-slider.php:557
+#: wp-parallax-content-slider.php:626
 msgid "Index of the first slide to display"
 msgstr ""
 
-#: wp-parallax-content-slider.php:568
+#: wp-parallax-content-slider.php:637
 msgid "Dynamic Mode Display Options"
 msgstr ""
 
-#: wp-parallax-content-slider.php:572
+#: wp-parallax-content-slider.php:641
 msgid "Content type"
 msgstr ""
 
-#: wp-parallax-content-slider.php:575
+#: wp-parallax-content-slider.php:644
 msgid "Posts"
 msgstr ""
 
-#: wp-parallax-content-slider.php:576
+#: wp-parallax-content-slider.php:645
 msgid "Pages"
 msgstr ""
 
-#: wp-parallax-content-slider.php:577
+#: wp-parallax-content-slider.php:646
 msgid "Post and pages"
 msgstr ""
 
-#: wp-parallax-content-slider.php:579
+#: wp-parallax-content-slider.php:648
 msgid "Choose what type of content you want to see in the slider"
 msgstr ""
 
-#: wp-parallax-content-slider.php:584
+#: wp-parallax-content-slider.php:653
 msgid "Number of articles to display"
 msgstr ""
 
-#: wp-parallax-content-slider.php:587
+#: wp-parallax-content-slider.php:656
 msgid "Maximum number of articles to display in the dynamic slider"
 msgstr ""
 
-#: wp-parallax-content-slider.php:592
+#: wp-parallax-content-slider.php:661
 msgid "Sort posts by"
 msgstr ""
 
-#: wp-parallax-content-slider.php:595
+#: wp-parallax-content-slider.php:664
 msgid "Date"
 msgstr ""
 
-#: wp-parallax-content-slider.php:596
+#: wp-parallax-content-slider.php:665
 msgid "Random"
 msgstr ""
 
-#: wp-parallax-content-slider.php:597
+#: wp-parallax-content-slider.php:666
 msgid "Title"
 msgstr ""
 
-#: wp-parallax-content-slider.php:598
+#: wp-parallax-content-slider.php:667
 msgid "Author"
 msgstr ""
 
-#: wp-parallax-content-slider.php:599
+#: wp-parallax-content-slider.php:668
 msgid "Number of comments"
 msgstr ""
 
-#: wp-parallax-content-slider.php:600
+#: wp-parallax-content-slider.php:669
 msgid "Last modified date"
 msgstr ""
 
-#: wp-parallax-content-slider.php:602
+#: wp-parallax-content-slider.php:671
 msgid "Choose how do you want to sort the posts in the slider"
 msgstr ""
 
-#: wp-parallax-content-slider.php:607
+#: wp-parallax-content-slider.php:676
 msgid "Sort order"
 msgstr ""
 
-#: wp-parallax-content-slider.php:610
+#: wp-parallax-content-slider.php:679
 msgid "Ascending"
 msgstr ""
 
-#: wp-parallax-content-slider.php:611
+#: wp-parallax-content-slider.php:680
 msgid "Descending"
 msgstr ""
 
-#: wp-parallax-content-slider.php:613
+#: wp-parallax-content-slider.php:682
 msgid "Choose how do you want to order the posts in the slider"
 msgstr ""
 
-#: wp-parallax-content-slider.php:618
+#: wp-parallax-content-slider.php:687
 msgid "Category filter"
 msgstr ""
 
-#: wp-parallax-content-slider.php:621
+#: wp-parallax-content-slider.php:690
 msgid "Only display posts of chosen categories"
 msgstr ""
 
-#: wp-parallax-content-slider.php:626
+#: wp-parallax-content-slider.php:695
 msgid "Categories to display"
 msgstr ""
 
-#: wp-parallax-content-slider.php:649
+#: wp-parallax-content-slider.php:718
 msgid ""
 "Categories to display (multiple selection). Empty selection will display all "
 "categories."
 msgstr ""
 
-#: wp-parallax-content-slider.php:654
+#: wp-parallax-content-slider.php:723
 msgid "Slide title max length"
 msgstr ""
 
-#: wp-parallax-content-slider.php:657
+#: wp-parallax-content-slider.php:726
 msgid "Maximum number of characters to display in a dynamic slide title"
 msgstr ""
 
-#: wp-parallax-content-slider.php:662
+#: wp-parallax-content-slider.php:731
 msgid "Default image"
 msgstr ""
 
-#: wp-parallax-content-slider.php:665
+#: wp-parallax-content-slider.php:734
 msgid "Name of the default image to display for posts without thumbnail"
 msgstr ""
 
-#: wp-parallax-content-slider.php:669
+#: wp-parallax-content-slider.php:738
 msgid "Displayed text"
 msgstr ""
 
-#: wp-parallax-content-slider.php:672
+#: wp-parallax-content-slider.php:741
 msgid "Content"
 msgstr ""
 
-#: wp-parallax-content-slider.php:673
+#: wp-parallax-content-slider.php:742
 msgid "Excerpt"
 msgstr ""
 
-#: wp-parallax-content-slider.php:675
+#: wp-parallax-content-slider.php:744
 msgid ""
 "Choose if you want to display the full content or the excerpt in the slider"
 msgstr ""
 
-#: wp-parallax-content-slider.php:682
+#: wp-parallax-content-slider.php:751
 msgid "Save Changes"
 msgstr ""
