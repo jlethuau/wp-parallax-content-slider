@@ -36,7 +36,11 @@ class WpParallaxContentSlider
 		add_action( 'admin_menu',  array( $this, 'admin_menu' ) );
 		add_shortcode( 'parallaxcontentslider', array( $this, 'parallaxcontentslider_shortcode_call' ) );
 		
-		// TODO: add a new custom post type "Parallax slides" to replace old HTML static slides
+		// New custom post type "Parallax slides" to replace old HTML static slides
+		add_action( 'init', array( $this, 'register_prlx_slides' ) );
+
+		// Adding Post Thumbnail Support to the theme (Featured image)
+		add_theme_support( 'post-thumbnails' );
 		
 	} // end constructor
 	
@@ -125,6 +129,71 @@ class WpParallaxContentSlider
 		delete_option( 'prlx_slider_settings' );
 		
 	} // end uninstall
+
+	/**
+	 * Add a custom post type 'prlx_slide' and its attributes to manage static slides in the Wordpress admin panel
+	 */
+	function register_prlx_slides() {
+
+		// Custom post type "prlx_slide" parameters
+
+		$labels = array(
+				'name' => _x('Parallax slide', 'post type general name', 'wp-parallax-content-slider'),
+				'singular_name' => _x('Parallax slide', 'post type singular name', 'wp-parallax-content-slider'),
+				'add_new' => _x('Add', 'Parallax slide', 'wp-parallax-content-slider'),
+				'add_new_item' => __('Add new slide', 'wp-parallax-content-slider'),
+				'edit_item' => __('Edit slide'),
+				'new_item' => __('New slide'),
+				'all_items' => __('All slides'),
+				'view_item' => __('See slide', 'wp-parallax-content-slider'),
+				'search_items' => __('Find slide', 'wp-parallax-content-slider'),
+				'not_found' =>  __('No slide found', 'wp-parallax-content-slider'),
+				'not_found_in_trash' => __('No slide in the trash', 'wp-parallax-content-slider'),
+				'parent_item_colon' => '',
+				'menu_name' => _x('Parallax slides', 'wordpress admin menu name', 'wp-parallax-content-slider')
+			);
+		$args = array(
+				'labels' => $labels,
+				'public' => true,
+				'publicly_queryable' => true,
+				'show_ui' => true,
+				'show_in_menu' => true,
+				'query_var' => true,
+				'rewrite' => true,
+				'capability_type' => 'post',
+				'hierarchical' => false,
+				'supports' => array( 'title', 'editor', 'thumbnail' ),
+				//'menu_icon' => plugins_url( 'images/image.png', __FILE__ ),
+			);
+
+		register_post_type('prlx_slide',$args);
+
+		// Custom type category to classify slides
+
+		$labels = array(
+				'name' => _x( 'Slide categories', 'taxonomy general name', 'wp-parallax-content-slider' ),
+				'singular_name' => _x( 'Slide category', 'taxonomy singular name', 'wp-parallax-content-slider' ),
+				'search_items' =>  __( 'Find category', 'wp-parallax-content-slider' ),
+				'all_items' => __( 'All categories', 'wp-parallax-content-slider' ),
+				'parent_item' => __( 'Parent', 'wp-parallax-content-slider' ),
+				'parent_item_colon' => __( 'Parent:', 'wp-parallax-content-slider' ),
+				'edit_item' => __( 'Edit category', 'wp-parallax-content-slider' ),
+				'update_item' => __( 'Update Slide Category', 'wp-parallax-content-slider' ),
+				'add_new_item' => __( 'Add a new category', 'wp-parallax-content-slider' ),
+				'new_item_name' => __( 'New category', 'wp-parallax-content-slider' ),
+				'menu_name' => __( 'Slide categories', 'wp-parallax-content-slider' )
+			);
+
+		register_taxonomy( 
+			'prlx_slides_categories', 
+			array( 'prlx_slide' ), 
+			array(
+				'hierarchical' => true,
+				'labels' => $labels,
+				'query_var' => true,
+				'show_ui' => true
+			));
+	}
 
 	/**
 	 * Enable shortcode : [parallaxcontentslider]
@@ -256,8 +325,8 @@ $outputScript = <<<SCRIPTOUTPUT
 		});
 
 		jQuery('#da-slider').swipe({
-		     swipeLeft:  function() { jQuery('#da-slider').find('span.da-arrows-next').click() },
-		     swipeRight: function() { jQuery('#da-slider').find('span.da-arrows-prev').click() },
+			 swipeLeft:  function() { jQuery('#da-slider').find('span.da-arrows-next').click() },
+			 swipeRight: function() { jQuery('#da-slider').find('span.da-arrows-prev').click() },
 		})
 
 		/* FIXME
@@ -280,13 +349,13 @@ SCRIPTOUTPUT;
 		// Doing this will prevent you to lose your changes when you will update the plugin automatically
 		include('static-slides-sample.php');
 		if ($prlx_slider_mode === 'dynamic')
-        {
-        	print $outputDynamic.$outputScript;
-        }
-        else
-        {
-        	print $outputStatic.$outputScript;
-        }
+		{
+			print $outputDynamic.$outputScript;
+		}
+		else
+		{
+			print $outputStatic.$outputScript;
+		}
 
 		// HTML Output end
 		// --------------------------------------------------------
@@ -504,9 +573,9 @@ SCRIPTOUTPUT;
 						<th scope="row"><?php _e( 'Slider display mode', 'wp-parallax-content-slider' ); ?>:</th>
 						<td>
 							<select name="prlx_slider_mode" id="prlx_slider_mode">
-                            	<option value="dynamic"><?php _e( 'Dynamic : display last posts', 'wp-parallax-content-slider' ); ?></option>
-                            	<option value="static" <?php if ( $prlx_slider_settings['mode'] === "static") echo 'selected="selected"'; ?>><?php _e( 'Static : display static HTML content', 'wp-parallax-content-slider' ); ?></option>
-                            </select>
+								<option value="dynamic"><?php _e( 'Dynamic : display last posts', 'wp-parallax-content-slider' ); ?></option>
+								<option value="static" <?php if ( $prlx_slider_settings['mode'] === "static") echo 'selected="selected"'; ?>><?php _e( 'Static : display static HTML content', 'wp-parallax-content-slider' ); ?></option>
+							</select>
 						</td>
 					</tr>
 
@@ -537,11 +606,11 @@ SCRIPTOUTPUT;
 						<th scope="row"><?php _e( 'Slider theme', 'wp-parallax-content-slider' ); ?>:</th>
 						<td>
 							<select name="prlx_slider_theme" id="prlx_slider_theme">
-                            	<option value="default"><?php _e( 'Default : Yellow waves', 'wp-parallax-content-slider' ); ?></option>
-                            	<option value="dark" <?php if ( $prlx_slider_settings['theme'] === "dark") echo 'selected="selected"'; ?>><?php _e( 'Dark', 'wp-parallax-content-slider' ); ?></option>
-                            	<option value="retro" <?php if ( $prlx_slider_settings['theme'] === "retro") echo 'selected="selected"'; ?>><?php _e( 'Retro Red', 'wp-parallax-content-slider' ); ?></option>
-                            	<option value="silver" <?php if ( $prlx_slider_settings['theme'] === "silver") echo 'selected="selected"'; ?>><?php _e( 'Silver', 'wp-parallax-content-slider' ); ?></option>
-                            </select>
+								<option value="default"><?php _e( 'Default : Yellow waves', 'wp-parallax-content-slider' ); ?></option>
+								<option value="dark" <?php if ( $prlx_slider_settings['theme'] === "dark") echo 'selected="selected"'; ?>><?php _e( 'Dark', 'wp-parallax-content-slider' ); ?></option>
+								<option value="retro" <?php if ( $prlx_slider_settings['theme'] === "retro") echo 'selected="selected"'; ?>><?php _e( 'Retro Red', 'wp-parallax-content-slider' ); ?></option>
+								<option value="silver" <?php if ( $prlx_slider_settings['theme'] === "silver") echo 'selected="selected"'; ?>><?php _e( 'Silver', 'wp-parallax-content-slider' ); ?></option>
+							</select>
 						</td>
 					</tr>
 
@@ -572,10 +641,10 @@ SCRIPTOUTPUT;
 						<th scope="row"><?php _e( 'Content type', 'wp-parallax-content-slider' ); ?>:</th>
 						<td>
 							<select name="prlx_slider_content_type" id="prlx_slider_content_type">
-                            	<option value="post" <?php if ( $prlx_slider_settings['content_type'] === "post") echo 'selected="selected"'; ?>><?php _e( 'Posts', 'wp-parallax-content-slider' ); ?></option>
-                            	<option value="page" <?php if ( $prlx_slider_settings['content_type'] === "page") echo 'selected="selected"'; ?>><?php _e( 'Pages', 'wp-parallax-content-slider' ); ?></option>
-                            	<option value="both" <?php if ( $prlx_slider_settings['content_type'] === "both") echo 'selected="selected"'; ?>><?php _e( 'Post and pages', 'wp-parallax-content-slider' ); ?></option>
-                            </select>
+								<option value="post" <?php if ( $prlx_slider_settings['content_type'] === "post") echo 'selected="selected"'; ?>><?php _e( 'Posts', 'wp-parallax-content-slider' ); ?></option>
+								<option value="page" <?php if ( $prlx_slider_settings['content_type'] === "page") echo 'selected="selected"'; ?>><?php _e( 'Pages', 'wp-parallax-content-slider' ); ?></option>
+								<option value="both" <?php if ( $prlx_slider_settings['content_type'] === "both") echo 'selected="selected"'; ?>><?php _e( 'Post and pages', 'wp-parallax-content-slider' ); ?></option>
+							</select>
 							<label for="prlx_slider_content_type"><?php _e( 'Choose what type of content you want to see in the slider', 'wp-parallax-content-slider' ); ?></label><br />
 						</td>
 					</tr>
@@ -592,13 +661,13 @@ SCRIPTOUTPUT;
 						<th scope="row"><?php _e( 'Sort posts by', 'wp-parallax-content-slider' ); ?>:</th>
 						<td>
 							<select name="prlx_slider_sort_by" id="prlx_slider_sort_by">
-                            	<option value="date" <?php if ( $prlx_slider_settings['sort_by'] === "date") echo 'selected="selected"'; ?>><?php _e( 'Date', 'wp-parallax-content-slider' ); ?></option>
-                            	<option value="rand" <?php if ( $prlx_slider_settings['sort_by'] === "rand") echo 'selected="selected"'; ?>><?php _e( 'Random', 'wp-parallax-content-slider' ); ?></option>
-                            	<option value="title" <?php if ( $prlx_slider_settings['sort_by'] === "title") echo 'selected="selected"'; ?>><?php _e( 'Title', 'wp-parallax-content-slider' ); ?></option>
-                            	<option value="author" <?php if ( $prlx_slider_settings['sort_by'] === "author") echo 'selected="selected"'; ?>><?php _e( 'Author', 'wp-parallax-content-slider' ); ?></option>
-                            	<option value="comment_count" <?php if ( $prlx_slider_settings['sort_by'] === "comment_count") echo 'selected="selected"'; ?>><?php _e( 'Number of comments', 'wp-parallax-content-slider' ); ?></option>
-                            	<option value="modified" <?php if ( $prlx_slider_settings['sort_by'] === "modified") echo 'selected="selected"'; ?>><?php _e( 'Last modified date', 'wp-parallax-content-slider' ); ?></option>
-                            </select>
+								<option value="date" <?php if ( $prlx_slider_settings['sort_by'] === "date") echo 'selected="selected"'; ?>><?php _e( 'Date', 'wp-parallax-content-slider' ); ?></option>
+								<option value="rand" <?php if ( $prlx_slider_settings['sort_by'] === "rand") echo 'selected="selected"'; ?>><?php _e( 'Random', 'wp-parallax-content-slider' ); ?></option>
+								<option value="title" <?php if ( $prlx_slider_settings['sort_by'] === "title") echo 'selected="selected"'; ?>><?php _e( 'Title', 'wp-parallax-content-slider' ); ?></option>
+								<option value="author" <?php if ( $prlx_slider_settings['sort_by'] === "author") echo 'selected="selected"'; ?>><?php _e( 'Author', 'wp-parallax-content-slider' ); ?></option>
+								<option value="comment_count" <?php if ( $prlx_slider_settings['sort_by'] === "comment_count") echo 'selected="selected"'; ?>><?php _e( 'Number of comments', 'wp-parallax-content-slider' ); ?></option>
+								<option value="modified" <?php if ( $prlx_slider_settings['sort_by'] === "modified") echo 'selected="selected"'; ?>><?php _e( 'Last modified date', 'wp-parallax-content-slider' ); ?></option>
+							</select>
 							<label for="prlx_slider_sort_by"><?php _e( 'Choose how do you want to sort the posts in the slider', 'wp-parallax-content-slider' ); ?></label><br />
 						</td>
 					</tr>
@@ -607,9 +676,9 @@ SCRIPTOUTPUT;
 						<th scope="row"><?php _e( 'Sort order', 'wp-parallax-content-slider' ); ?>:</th>
 						<td>
 							<select name="prlx_slider_order_by" id="prlx_slider_order_by">
-                            	<option value="asc" <?php if ( $prlx_slider_settings['order_by'] === "asc") echo 'selected="selected"'; ?>><?php _e( 'Ascending', 'wp-parallax-content-slider' ); ?></option>
-                            	<option value="desc" <?php if ( $prlx_slider_settings['order_by'] === "desc") echo 'selected="selected"'; ?>><?php _e( 'Descending', 'wp-parallax-content-slider' ); ?></option>
-                            </select>
+								<option value="asc" <?php if ( $prlx_slider_settings['order_by'] === "asc") echo 'selected="selected"'; ?>><?php _e( 'Ascending', 'wp-parallax-content-slider' ); ?></option>
+								<option value="desc" <?php if ( $prlx_slider_settings['order_by'] === "desc") echo 'selected="selected"'; ?>><?php _e( 'Descending', 'wp-parallax-content-slider' ); ?></option>
+							</select>
 							<label for="prlx_slider_order_by"><?php _e( 'Choose how do you want to order the posts in the slider', 'wp-parallax-content-slider' ); ?></label><br />
 						</td>
 					</tr>
@@ -626,25 +695,25 @@ SCRIPTOUTPUT;
 						<th scope="row"><?php _e( 'Categories to display', 'wp-parallax-content-slider' ); ?>:</th>
 						<td>
 							<select name="prlx_slider_categories[]" id="prlx_slider_categories" multiple="multiple" size="3" style="vertical-align: top;">
-                            	<?php
-                            		$args = array( 'orderby' => 'name',
+								<?php
+									$args = array( 'orderby' => 'name',
 												   'order' => 'ASC',
-                            					   'hide_empty' => 1, 		// Set to 0 if you want to show empty categories
-                            				 	   'suppress_filters'=>0); 	// Added for WPML support
-                            		$wp_categories = get_categories( $args );
+												   'hide_empty' => 1, 		// Set to 0 if you want to show empty categories
+												   'suppress_filters'=>0); 	// Added for WPML support
+									$wp_categories = get_categories( $args );
 
-                            		// Get selected values
-                            		$prlx_slider_categories_array = preg_split("/[\s,]+/",$prlx_slider_settings['categories']);
+									// Get selected values
+									$prlx_slider_categories_array = preg_split("/[\s,]+/",$prlx_slider_settings['categories']);
 
-                            		foreach ($wp_categories as $i => $categ)
-                            		{
-                            			echo '<option value="'.$categ->term_id.'" ';
-                            			if (in_array($categ->term_id, $prlx_slider_categories_array))
-                            					echo 'selected="selected"';
-                            			echo '>'.$categ->name.'</option>\n';
-                            		}
-                            	?>
-                            </select>
+									foreach ($wp_categories as $i => $categ)
+									{
+										echo '<option value="'.$categ->term_id.'" ';
+										if (in_array($categ->term_id, $prlx_slider_categories_array))
+												echo 'selected="selected"';
+										echo '>'.$categ->name.'</option>\n';
+									}
+								?>
+							</select>
 
 							<label for="prlx_slider_categories"><?php _e( 'Categories to display (multiple selection). Empty selection will display all categories.', 'wp-parallax-content-slider' ); ?></label><br />
 						</td>
@@ -669,9 +738,9 @@ SCRIPTOUTPUT;
 						<th scope="row"><?php _e( 'Displayed text', 'wp-parallax-content-slider' ); ?>:</th>
 						<td>
 							<select name="prlx_text_content" id="prlx_text_content">
-                            	<option value="content" <?php if ( $prlx_slider_settings['text_content'] === "content") echo 'selected="selected"'; ?>><?php _e( 'Content', 'wp-parallax-content-slider' ); ?></option>
-                            	<option value="excerpt" <?php if ( $prlx_slider_settings['text_content'] === "excerpt") echo 'selected="selected"'; ?>><?php _e( 'Excerpt', 'wp-parallax-content-slider' ); ?></option>
-                            </select>
+								<option value="content" <?php if ( $prlx_slider_settings['text_content'] === "content") echo 'selected="selected"'; ?>><?php _e( 'Content', 'wp-parallax-content-slider' ); ?></option>
+								<option value="excerpt" <?php if ( $prlx_slider_settings['text_content'] === "excerpt") echo 'selected="selected"'; ?>><?php _e( 'Excerpt', 'wp-parallax-content-slider' ); ?></option>
+							</select>
 							<label for="prlx_text_content"><?php _e( 'Choose if you want to display the full content or the excerpt in the slider', 'wp-parallax-content-slider' ); ?></label><br />
 						</td>
 					</tr>
