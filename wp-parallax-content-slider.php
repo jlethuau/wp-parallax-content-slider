@@ -4,7 +4,7 @@
  * Plugin URI: http://jltweb.info/realisations/wp-parallax-content-plugin/
  * Description: A customizable JQuery content slider with CSS3 animations and parallax effects
  * Author URI: http://jltweb.info/
- * Author: Julien Le Thuaut
+ * Author: Julien Le Thuaut (MBA Multimedia)
  * Version: 0.9.3
  * Licence: GPLv2
 */
@@ -30,14 +30,11 @@ class WpParallaxContentSlider
 		// Register hooks that are fired when the plugin is activated, deactivated, and uninstalled, respectively.
 		register_activation_hook( __FILE__, array( $this, 'activate' ) );
 		//register_deactivation_hook( __FILE__, array( $this, 'uninstall' ) ); // TODO: Doing this on deactivation should require an extra parameter (user choice)
-		//register_uninstall_hook( __FILE__, array( $this, 'uninstall' ) );
+		register_uninstall_hook( __FILE__, array( $this, 'uninstall' ) );
 		
 		// Parallax slider plugin specific actions
 		add_action( 'admin_menu',  array( $this, 'admin_menu' ) );
 		add_shortcode( 'parallaxcontentslider', array( $this, 'parallaxcontentslider_shortcode_call' ) );
-		
-		// TODO: add a new custom post type "Parallax slides" to replace old HTML static slides
-		
 	} // end constructor
 	
 	/**
