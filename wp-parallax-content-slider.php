@@ -186,7 +186,7 @@ class WpParallaxContentSlider
 			);
 
 		register_taxonomy( 
-			'prlx_slides_categories', 
+			'prlx_slide_category', 
 			array( 'prlx_slide' ), 
 			array(
 				'hierarchical' => true,
