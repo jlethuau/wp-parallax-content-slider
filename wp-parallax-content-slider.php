@@ -38,6 +38,7 @@ class WpParallaxContentSlider
 		
 		// New custom post type "Parallax slides" to replace old HTML static slides
 		add_action( 'init', array( $this, 'register_prlx_slides' ) );
+		add_action( 'admin_head', array( $this, 'customize_admin_icon' ) );
 
 		// Adding Post Thumbnail Support to the theme (Featured image)
 		add_theme_support( 'post-thumbnails' );
@@ -163,7 +164,7 @@ class WpParallaxContentSlider
 				'capability_type' => 'post',
 				'hierarchical' => false,
 				'supports' => array( 'title', 'editor', 'thumbnail' ),
-				//'menu_icon' => plugins_url( 'images/image.png', __FILE__ ),
+				'menu_icon' => plugins_url( 'images/icon-16.png', __FILE__ ),
 			);
 
 		register_post_type('prlx_slide',$args);
@@ -193,6 +194,17 @@ class WpParallaxContentSlider
 				'query_var' => true,
 				'show_ui' => true
 			));
+	}
+	/**
+	 * Use the media library icon for slides
+	 */
+	function customize_admin_icon() {
+		$icon_path = plugins_url('', __FILE__) . '/images/icon-32.png';
+		?>
+		<style type="text/css">
+				.icon32-posts-prlx_slide { background-image: url(<?php echo $icon_path; ?>) !important; background-position: 0 0 !important; }
+		</style>
+		<?php
 	}
 
 	/**
