@@ -19,6 +19,7 @@ Transitions between slides are made using a powerfull combination of CSS3 and JQ
 
 It is very easy to configure the plugin as it adds automatically an admin page in Wordpress administration section. You will be able to configure :
 
+* New in v0.9.4 : Filter category in a shortcode parameter (eg. [parallaxcontentslider categ="2"] or [parallaxcontentslider categ="2,5"]);
 * The type of content to display (posts, pages, both);
 * A category to filter to choose which post categories you wan't to display;
 * The number of slides to display;
