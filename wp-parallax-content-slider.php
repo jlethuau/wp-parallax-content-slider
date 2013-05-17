@@ -177,7 +177,7 @@ class WpParallaxContentSlider
 	{
 		// Enqueue scripts
 		wp_enqueue_script( 'wp-parallax-content-slider-modernizr' );
-		wp_enqueue_script( 'wp-parallax-content-slider-jswipe' );
+		wp_enqueue_script( 'wp-parallax-content-slider-touchSwipe' );
 		wp_enqueue_script( 'wp-parallax-content-slider-cslider' );
 
 		// Retrieving plugin parameters (user choices or default values)
