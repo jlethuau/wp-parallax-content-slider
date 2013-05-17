@@ -1,0 +1,330 @@
+# 
+# Translators:
+# Batuhan Büyükgüzel <bbuyukguzel@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Parallax Content Slider\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-19 18:40+0100\n"
+"PO-Revision-Date: 2013-05-10 23:34+0000\n"
+"Last-Translator: Batuhan Büyükgüzel <bbuyukguzel@gmail.com>\n"
+"Language-Team: Turkish (Turkey) (http://www.transifex.com/projects/p/wp-parallax-content-slider/language/tr_TR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr_TR\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: static-slides-sample.php:16 wp-parallax-content-slider.php:307
+msgid "Read more"
+msgstr "Devamını oku"
+
+#: wp-parallax-content-slider.php:318 wp-parallax-content-slider.php:319
+msgid "WP Parallax Content Slider"
+msgstr "WP Parallax Content Slider"
+
+#: wp-parallax-content-slider.php:333
+msgid "No access"
+msgstr "Erişim yok"
+
+#: wp-parallax-content-slider.php:346
+msgid "Incorrect slider mode"
+msgstr "Slider modu hatalı"
+
+#: wp-parallax-content-slider.php:351
+msgid "Incorrect slider theme"
+msgstr "Slider teması hatalı"
+
+#: wp-parallax-content-slider.php:356
+msgid "Incorrect background increment pixel size"
+msgstr ""
+
+#: wp-parallax-content-slider.php:361
+msgid "Incorrect time interval"
+msgstr "Zaman aralığı hatalı"
+
+#: wp-parallax-content-slider.php:367
+msgid "Incorrect first slide number"
+msgstr "Başlangıç slayt numarası hatalı"
+
+#: wp-parallax-content-slider.php:374
+msgid "Incorrect maximum slide number"
+msgstr "Maksimum slayt sayısı hatalı"
+
+#: wp-parallax-content-slider.php:379
+msgid "Incorrect maximum title length"
+msgstr "Maksimum başlık uzunluğu hatalı"
+
+#: wp-parallax-content-slider.php:384
+msgid "Incorrect default image"
+msgstr "Varsayılan resim hatalı"
+
+#: wp-parallax-content-slider.php:419
+msgid "Settings updated"
+msgstr "Ayarlar güncellendi"
+
+#: wp-parallax-content-slider.php:423
+msgid "Settings update failed:"
+msgstr "Ayarların güncellenmesi başarısız oldu:"
+
+#: wp-parallax-content-slider.php:455
+msgid "WP Parallax Content Slider Settings"
+msgstr "WP Parallax Content Slider Ayarları"
+
+#: wp-parallax-content-slider.php:459
+msgid ""
+"This plugin is continuing to evolve because of contributions from Wordpress "
+"users like you. Thank you. If you found this plugin useful, especially if "
+"you use it for commercial purposes, feel free to make a"
+msgstr ""
+
+#: wp-parallax-content-slider.php:461
+msgid "donation"
+msgstr "bağış"
+
+#: wp-parallax-content-slider.php:463
+msgid ""
+"Your support helps me to spend more time on development and provide better "
+"customer service."
+msgstr ""
+
+#: wp-parallax-content-slider.php:467
+msgid "Alternatively, if you like this plugin, don't hesitate to "
+msgstr "Alternatif olarak, eğer bu eklentiyi beğenirseniz, "
+
+#: wp-parallax-content-slider.php:469
+msgid "spread the word"
+msgstr "Twitter'da, Facebook'ta, kendi blogunuzda,"
+
+#: wp-parallax-content-slider.php:471
+msgid "about it on Twitter, on Facebook,on your own blog,"
+msgstr "tavsiye ederek, yayılmasında tereddüt etmeyin."
+
+#: wp-parallax-content-slider.php:473
+msgid "rate it"
+msgstr "oyla"
+
+#: wp-parallax-content-slider.php:475
+msgid "on Wordpress.org, thanks!"
+msgstr ""
+
+#: wp-parallax-content-slider.php:480
+msgid "Code to insert"
+msgstr ""
+
+#: wp-parallax-content-slider.php:481
+msgid ""
+"The code below must be inserted in a Wordpress file, where you want to "
+"display the parallax content slider:"
+msgstr ""
+
+#: wp-parallax-content-slider.php:487
+msgid ""
+"Since v0.9, an alternative is to call the plugin with a shortcode. Doing "
+"this, you will be able to include the slider inside a page or inside a blog "
+"post:"
+msgstr ""
+
+#: wp-parallax-content-slider.php:500
+msgid "General Display Options"
+msgstr "Genel Görünüm Ayarları"
+
+#: wp-parallax-content-slider.php:504
+msgid "Slider display mode"
+msgstr ""
+
+#: wp-parallax-content-slider.php:507
+msgid "Dynamic : display last posts"
+msgstr ""
+
+#: wp-parallax-content-slider.php:508
+msgid "Static : display static HTML content"
+msgstr ""
+
+#: wp-parallax-content-slider.php:514
+msgid "Number of pixels for background increment"
+msgstr ""
+
+#: wp-parallax-content-slider.php:517
+msgid "A negative value will invert the parallax effect"
+msgstr ""
+
+#: wp-parallax-content-slider.php:522
+msgid "Auto-play mode"
+msgstr "Otomatik oynatma modu"
+
+#: wp-parallax-content-slider.php:525
+msgid "Activate auto-play"
+msgstr "Otomatik oynatmayı aktif et"
+
+#: wp-parallax-content-slider.php:530
+msgid "Time between each slide (in ms)"
+msgstr "Her slayt arasındaki zaman (ms cinsinden)"
+
+#: wp-parallax-content-slider.php:537
+msgid "Slider theme"
+msgstr "Slider tema"
+
+#: wp-parallax-content-slider.php:540
+msgid "Default : Yellow waves"
+msgstr "Varsayılan : Sarı dalgalar"
+
+#: wp-parallax-content-slider.php:541
+msgid "Dark"
+msgstr "Koyu"
+
+#: wp-parallax-content-slider.php:542
+msgid "Retro Red"
+msgstr "Retro Kırmızı"
+
+#: wp-parallax-content-slider.php:543
+msgid "Silver"
+msgstr "Gümüş"
+
+#: wp-parallax-content-slider.php:553
+msgid "Static Mode Display Options"
+msgstr ""
+
+#: wp-parallax-content-slider.php:557
+msgid "Index of the first slide to display"
+msgstr ""
+
+#: wp-parallax-content-slider.php:568
+msgid "Dynamic Mode Display Options"
+msgstr ""
+
+#: wp-parallax-content-slider.php:572
+msgid "Content type"
+msgstr "İçerik tipi"
+
+#: wp-parallax-content-slider.php:575
+msgid "Posts"
+msgstr "Yazılar"
+
+#: wp-parallax-content-slider.php:576
+msgid "Pages"
+msgstr "Sayfalar"
+
+#: wp-parallax-content-slider.php:577
+msgid "Post and pages"
+msgstr "Yazılar ve sayfalar"
+
+#: wp-parallax-content-slider.php:579
+msgid "Choose what type of content you want to see in the slider"
+msgstr ""
+
+#: wp-parallax-content-slider.php:584
+msgid "Number of articles to display"
+msgstr ""
+
+#: wp-parallax-content-slider.php:587
+msgid "Maximum number of articles to display in the dynamic slider"
+msgstr ""
+
+#: wp-parallax-content-slider.php:592
+msgid "Sort posts by"
+msgstr ""
+
+#: wp-parallax-content-slider.php:595
+msgid "Date"
+msgstr "Tarih"
+
+#: wp-parallax-content-slider.php:596
+msgid "Random"
+msgstr "Rastgele"
+
+#: wp-parallax-content-slider.php:597
+msgid "Title"
+msgstr "Başlık"
+
+#: wp-parallax-content-slider.php:598
+msgid "Author"
+msgstr "Yazar"
+
+#: wp-parallax-content-slider.php:599
+msgid "Number of comments"
+msgstr ""
+
+#: wp-parallax-content-slider.php:600
+msgid "Last modified date"
+msgstr "Son değiştirme tarihi"
+
+#: wp-parallax-content-slider.php:602
+msgid "Choose how do you want to sort the posts in the slider"
+msgstr ""
+
+#: wp-parallax-content-slider.php:607
+msgid "Sort order"
+msgstr "Sıralama düzeni"
+
+#: wp-parallax-content-slider.php:610
+msgid "Ascending"
+msgstr "Artan"
+
+#: wp-parallax-content-slider.php:611
+msgid "Descending"
+msgstr "Azalan"
+
+#: wp-parallax-content-slider.php:613
+msgid "Choose how do you want to order the posts in the slider"
+msgstr ""
+
+#: wp-parallax-content-slider.php:618
+msgid "Category filter"
+msgstr "Kategori filtresi"
+
+#: wp-parallax-content-slider.php:621
+msgid "Only display posts of chosen categories"
+msgstr "Yalnızca seçilen kategorilerdeki yazıları göster"
+
+#: wp-parallax-content-slider.php:626
+msgid "Categories to display"
+msgstr "Görüntülenecek kategoriler"
+
+#: wp-parallax-content-slider.php:649
+msgid ""
+"Categories to display (multiple selection). Empty selection will display all"
+" categories."
+msgstr "Görüntülenecek kategoriler (çoklu seçim). Boş seçim tüm kategorileri görüntüleyecektir."
+
+#: wp-parallax-content-slider.php:654
+msgid "Slide title max length"
+msgstr "Slayt başlığının maksimum uzunluğu"
+
+#: wp-parallax-content-slider.php:657
+msgid "Maximum number of characters to display in a dynamic slide title"
+msgstr ""
+
+#: wp-parallax-content-slider.php:662
+msgid "Default image"
+msgstr "Varsayılan resim"
+
+#: wp-parallax-content-slider.php:665
+msgid "Name of the default image to display for posts without thumbnail"
+msgstr ""
+
+#: wp-parallax-content-slider.php:669
+msgid "Displayed text"
+msgstr ""
+
+#: wp-parallax-content-slider.php:672
+msgid "Content"
+msgstr "İçerik"
+
+#: wp-parallax-content-slider.php:673
+msgid "Excerpt"
+msgstr ""
+
+#: wp-parallax-content-slider.php:675
+msgid ""
+"Choose if you want to display the full content or the excerpt in the slider"
+msgstr ""
+
+#: wp-parallax-content-slider.php:682
+msgid "Save Changes"
+msgstr "Değişiklikleri Kaydet"

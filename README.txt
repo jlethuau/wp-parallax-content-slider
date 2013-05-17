@@ -47,6 +47,7 @@ Available translations:
 * Russian (ru_RU): [Temur Danelia](http://wordpress.org/support/profile/temur-danelia)
 * Georgian (ka_GE): [Temur Danelia](http://wordpress.org/support/profile/temur-danelia)
 * Polish (pl_PL): [snecz](http://wordpress.org/support/profile/snecz)
+* Turkish (tr_TR): Batuhan Büyükgüzel (Partial translation: 65%)
 * other languages (xx_XX): Translators needed ;)
 
 = Plugin's Official Site =
