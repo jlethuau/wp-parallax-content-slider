@@ -163,17 +163,24 @@ class WpParallaxContentSlider
 	} // end uninstall
 
 	/**
-	 * Enable shortcode : [parallaxcontentslider]
+	 * Enable shortcodes : 
+	 * [parallaxcontentslider]
+	 * [parallaxcontentslider cat="2"]
+	 * [parallaxcontentslider cat="2,5"]
 	 */
 	public function parallaxcontentslider_shortcode_call( $atts ){
-		get_wp_parallax_content_slider();
-		// TODO: Add attributes to customize the slider?
+		// Extracting parameters
+		extract( shortcode_atts( array (
+										'categ' => '',
+									   ), $atts ) );
+		
+		get_wp_parallax_content_slider( $categ );
 	}
 
 	/**
 	 * Return the plugin HTML code for output
 	 */
-	public function get_parallax_content_slider()
+	public function get_parallax_content_slider( $category = '' )
 	{
 		// Enqueue scripts
 		wp_enqueue_script( 'wp-parallax-content-slider-modernizr' );
@@ -241,7 +248,14 @@ class WpParallaxContentSlider
 		}
 
 		$cat = '';
-		if ($prlx_slider_category_filter)
+		if ( ! empty( $category ) ) 
+		{
+			// Mode is forced to 'dynamic'
+			$prlx_slider_mode = 'dynamic';
+			// Get category filter from shortcode attribute (i.e. function 'category' parameter)
+			$cat = $category;
+		}
+		elseif ($prlx_slider_category_filter)
 		{
 			$cat = $prlx_slider_categories;
 		}
@@ -724,10 +738,10 @@ DYNAMICOUTPUT;
 
 $wp_parallax_content_slider = new WpParallaxContentSlider();
 
-function get_wp_parallax_content_slider()
+function get_wp_parallax_content_slider( $cat_filter = '' )
 {
 	global $wp_parallax_content_slider;
-	$wp_parallax_content_slider->get_parallax_content_slider();
+	echo $wp_parallax_content_slider->get_parallax_content_slider( $cat_filter );
 }
 
 ?>

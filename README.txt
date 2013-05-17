@@ -5,7 +5,7 @@ Contributors: wp-maverick, mbamultimedia
 Tags: slider, parallax, animation, jquery, responsive
 Requires at least: 3.0
 Tested up to: 3.5.1
-Stable tag: 0.9.3
+Stable tag: 0.9.4
 
 A customizable JQuery content slider with CSS3 animations and parallax effects.
 
@@ -19,7 +19,9 @@ Transitions between slides are made using a powerfull combination of CSS3 and JQ
 
 It is very easy to configure the plugin as it adds automatically an admin page in Wordpress administration section. You will be able to configure :
 
-* New in v0.9.2 : The type of content to display (posts, pages, both);
+* New in v0.9.4 : Filter category in a shortcode parameter (eg. [parallaxcontentslider categ="2"] or [parallaxcontentslider categ="2,5"]);
+* The type of content to display (posts, pages, both);
+* A category to filter to choose which post categories you wan't to display;
 * The number of slides to display;
 * The auto-switch mode;
 * The time between each slide;
@@ -31,9 +33,11 @@ It's also possible to choose to display a static HTML content instead of display
 
 Roadmap:
 
+* Static slides in a new dedicated custom_post_type;
+* Better shortcodes;
+* Add a parameter to use an external CSS file to customize CSS styles;
 * Add extra parameters to the admin panel (Sizes, colors,...);
 * Better touch support;
-* Enbale the choice to use featured images in the slides in dynamic mode;
 * and many more...
 
 Available translations:
@@ -42,6 +46,7 @@ Available translations:
 * French (fr_FR): Julien Le Thuaut
 * Russian (ru_RU): [Temur Danelia](http://wordpress.org/support/profile/temur-danelia)
 * Georgian (ka_GE): [Temur Danelia](http://wordpress.org/support/profile/temur-danelia)
+* Polish (pl_PL): [snecz](http://wordpress.org/support/profile/snecz)
 * other languages (xx_XX): Translators needed ;)
 
 = Plugin's Official Site =
