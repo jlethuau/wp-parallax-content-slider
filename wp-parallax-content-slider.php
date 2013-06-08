@@ -7,7 +7,15 @@
  * Author: Julien Le Thuaut (MBA Multimedia)
  * Version: 1.0-dev
  * Licence: GPLv2
+ *
+ * Contributor: Chun Law
+ * Contribution: 	Use first image in content if there is no thumbnail image.
+ *					If no image in content, use default image
+ *
 */
+
+include_once plugin_dir_path( __FILE__ ) .'includes/content_functions.php';
+
 class WpParallaxContentSlider
 {
 	public $pluginUrl = '';
@@ -284,12 +292,17 @@ class WpParallaxContentSlider
 		while ( $myposts->have_posts() ) : $myposts->the_post();
 
 			// $custom = get_post_custom($post->ID);
-
+						
 			// Display the post thumbnail if there is one (Thank you John)
 			if ( has_post_thumbnail() ) {
 				$thumb = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
 				$url = $thumb['0'];
 				$default_slide_image = $url;
+			}
+			else if ( has_content_image( ) != '' ){
+			//	echo get_content_image_urls( get_the_content() );
+				$temp = get_content_image_urls( );
+				$default_slide_image = $temp[0];
 			}
 
 			if ($prlx_text_content === 'excerpt') {
