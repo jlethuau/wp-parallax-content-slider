@@ -30,7 +30,7 @@ class WpParallaxContentSlider
 		// Register hooks that are fired when the plugin is activated, deactivated, and uninstalled, respectively.
 		register_activation_hook( __FILE__, array( $this, 'activate' ) );
 		//register_deactivation_hook( __FILE__, array( $this, 'uninstall' ) ); // TODO: Doing this on deactivation should require an extra parameter (user choice)
-		register_uninstall_hook( __FILE__, array( $this, 'uninstall' ) );
+		register_uninstall_hook( __FILE__, array( __CLASS__, 'uninstall' ) );
 
 		// Parallax slider plugin specific actions
 		add_action( 'admin_menu',  array( $this, 'admin_menu' ) );
