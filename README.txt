@@ -48,6 +48,8 @@ Available translations:
 * Georgian (ka_GE): [Temur Danelia](http://wordpress.org/support/profile/temur-danelia)
 * Polish (pl_PL): [snecz](http://wordpress.org/support/profile/snecz)
 * Turkish (tr_TR): Batuhan Büyükgüzel (Partial translation: 65%)
+* Dutch (nl_NL): Marieke_Louise
+* German (de_DE): Jan Holthuis
 * other languages (xx_XX): Translators needed ;)
 
 = Plugin's Official Site =

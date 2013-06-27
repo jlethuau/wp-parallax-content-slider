@@ -41,9 +41,8 @@ If you want to help me or contribute to this project, I'll consider all requests
 ### TODOs
 
 * Code improvement
-* Add new translations files ([Contact me on twitter](http://twitter.com/JulienLeThuaut/) if you want to help :)
+* Add new translations files ([Contact me on twitter](http://twitter.com/JulienLeThuaut/) if you want to help or add your language on [transifex](https://github.com/jlethuau/wp-parallax-content-slider/wiki/Translations) :)
 * Use a new custom post type "Parallax slide" to manage static slides instead of the old static HTML file 
-* Better gesture 
 
 ## License
 
@@ -66,11 +65,20 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 ### 1.0-dev
 
-* Development version for GitHub users "only", official releases vill be packaged and put into the Wordpress.org official SVN 
-* Added filter hooks: prlx_slide_title, prlx_slide_content, prlx_pre_get_posts
-* New swipe JS plugin [touchswipe.js](http://labs.skinkers.com/touchSwipe/)
+Development version for GitHub users "only", official releases vill be packaged and put into the Wordpress.org official SVN 
 
-Contributors: [matthiasbreuer](https://github.com/matthiasbreuer)
+* Added some filter hooks: prlx_slide_title, prlx_slide_content, prlx_pre_get_posts
+* New swipe JS plugin [touchswipe.js](http://labs.skinkers.com/touchSwipe/)
+* Use first image in content if there is no thumbnail image
+* Fixed notice from wordpress with register_uninstall_hook
+* Added several new translation files
+
+GitHub contributors: 
+
+ * [matthiasbreuer](https://github.com/matthiasbreuer)
+ * [Heiko-OT](https://github.com/Heiko-OT)
+ * [chunlaw](https://github.com/chunlaw)
+ * [snecz](https://github.com/snecz)
 
 ### 0.9.3 
 
