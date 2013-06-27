@@ -1,4 +1,4 @@
-<?
+<?php
 /*
  * Description: include supporting functions for WP Parallax Content Slider
  * Licence: GPLv2
