@@ -644,7 +644,7 @@ DYNAMICOUTPUT;
 					<tr>
 						<th scope="row"><?php _e( 'Number of articles to display', 'wp-parallax-content-slider' ); ?>:</th>
 						<td>
-							<input type="text" name="prlx_slider_nb_articles" id="prlx_slider_nb_articles" value="<?php echo $prlx_slider_settings['nb_articles']; ?>" maxlength="1" size="1" />
+							<input type="text" name="prlx_slider_nb_articles" id="prlx_slider_nb_articles" value="<?php echo $prlx_slider_settings['nb_articles']; ?>" maxlength="2" size="2" />
 							<label for="prlx_slider_nb_articles"><?php _e( 'Maximum number of articles to display in the dynamic slider', 'wp-parallax-content-slider' ); ?></label><br />
 						</td>
 					</tr>

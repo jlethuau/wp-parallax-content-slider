@@ -72,6 +72,7 @@ Development version for GitHub users "only", official releases vill be packaged 
 * Use first image in content if there is no thumbnail image
 * Fixed notice from wordpress with register_uninstall_hook
 * Added several new translation files
+* Increased the maximum slide number allowed in a slider (0->99)
 
 GitHub contributors: 
 
