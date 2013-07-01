@@ -4,8 +4,8 @@ Donate link: http://jltweb.info/realisations/wp-parallax-content-plugin/#contrib
 Contributors: wp-maverick, mbamultimedia
 Tags: slider, parallax, animation, jquery, responsive
 Requires at least: 3.0
-Tested up to: 3.5.1
-Stable tag: 0.9.4
+Tested up to: 3.5.2
+Stable tag: trunk
 
 A customizable JQuery content slider with CSS3 animations and parallax effects.
 
@@ -19,9 +19,8 @@ Transitions between slides are made using a powerfull combination of CSS3 and JQ
 
 It is very easy to configure the plugin as it adds automatically an admin page in Wordpress administration section. You will be able to configure :
 
-* New in v0.9.4 : Filter category in a shortcode parameter (eg. [parallaxcontentslider categ="2"] or [parallaxcontentslider categ="2,5"]);
+* New in v0.9.4 : Filter by post category directly with a shortcode parameter (eg. [parallaxcontentslider categ="2"] or [parallaxcontentslider categ="2,5"]);
 * The type of content to display (posts, pages, both);
-* A category to filter to choose which post categories you wan't to display;
 * The number of slides to display;
 * The auto-switch mode;
 * The time between each slide;
@@ -30,6 +29,8 @@ It is very easy to configure the plugin as it adds automatically an admin page i
 * and many more...
 
 It's also possible to choose to display a static HTML content instead of displaying last posts in the slider.
+
+WARNING: This last feature is dangerous since all plugins files will are deleted by Wordpress during an automatic update! Be careful if you use it and backup your files.
 
 Roadmap:
 
@@ -50,7 +51,8 @@ Available translations:
 * Turkish (tr_TR): Batuhan Büyükgüzel (Partial translation: 65%)
 * Dutch (nl_NL): Marieke_Louise
 * German (de_DE): Jan Holthuis
-* other languages (xx_XX): Translators needed ;)
+* Swedish (sv_SE): Karin H Olsson
+* other languages (xx_XX): Translators needed ;) See the FAQ
 
 = Plugin's Official Site =
 
@@ -68,6 +70,13 @@ To install the plugin you must follow these 4 simple steps:
 If you want to insert the slider in a page (or a post), you will just have to place the following shortcode into the page text: `[parallaxcontentslider]`
 
 == Frequently Asked Questions ==
+= How may I contribute to this awesome project? =
+
+You can fork this project on [GitHub](https://github.com/jlethuau/wp-parallax-content-slider) and I'll consider all interesting pull requests :)
+
+If you want to contribute by adding your language to the plugin, you can send me your .po files
+
+Feel free to contact me via [twitter](http://twitter.com/JulienLeThuaut) (Only for contributions, I won't reply to support requests in 140 chars)
 
 = What is the difference between static and dynamic mode? =
 
@@ -113,6 +122,22 @@ You can see the how the slider will be displayed on different devices on the res
 2. The admin panel
 
 == Changelog ==
+
+To see the current development version, come and have a look to the project [GitHub repository](https://github.com/jlethuau/wp-parallax-content-slider)
+
+= 0.9.6 =
+* Serious PHP code refactoring
+* Added some filter hooks: prlx_slide_title, prlx_slide_content, prlx_pre_get_posts
+* New swipe JS plugin [touchswipe.js](http://labs.skinkers.com/touchSwipe/)
+* Use first image in content if there is no thumbnail image
+* Fixed notice from wordpress with register_uninstall_hook
+* Added several new translation files
+
+= 0.9.5 =
+* Fixed a bug : Some debug code forgotten in the main PHP file
+
+= 0.9.4 =
+* Support for a new shortcode parameter to filter on one or more categories
 
 = 0.9.3 =
 * New translations (Georgian and Russian) thanks to Temur Danelia
